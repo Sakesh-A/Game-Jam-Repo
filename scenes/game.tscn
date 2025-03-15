@@ -131,10 +131,14 @@ value = 50.0
 script = ExtResource("2_u5sy4")
 
 [node name="SoilHealth" type="ProgressBar" parent="CanvasLayer"]
-offset_left = 796.0
-offset_top = 193.0
-offset_right = 1132.0
-offset_bottom = 239.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -361.0
+offset_top = 189.0
+offset_right = -25.0
+offset_bottom = 235.0
+grow_horizontal = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_u5sy4")
 theme_override_styles/fill = SubResource("StyleBoxFlat_vtaks")
 step = 1.0
@@ -142,10 +146,14 @@ value = 50.0
 script = ExtResource("3_vtaks")
 
 [node name="PlantHealth" type="ProgressBar" parent="CanvasLayer"]
-offset_left = 796.0
-offset_top = 132.0
-offset_right = 1130.0
-offset_bottom = 178.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -355.0
+offset_top = 129.0
+offset_right = -21.0
+offset_bottom = 175.0
+grow_horizontal = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_kvpfn")
 theme_override_styles/fill = SubResource("StyleBoxFlat_dinhu")
 step = 1.0
@@ -153,10 +161,14 @@ value = 50.0
 script = ExtResource("4_kvpfn")
 
 [node name="LivestockHealth" type="ProgressBar" parent="CanvasLayer"]
-offset_left = 799.0
-offset_top = 75.0
-offset_right = 1132.0
-offset_bottom = 120.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -364.0
+offset_top = 76.0
+offset_right = -31.0
+offset_bottom = 121.0
+grow_horizontal = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_kvuet")
 theme_override_styles/fill = SubResource("StyleBoxFlat_trtic")
 step = 1.0
@@ -164,10 +176,14 @@ value = 50.0
 script = ExtResource("5_dinhu")
 
 [node name="WaterLabel" type="LineEdit" parent="CanvasLayer"]
-offset_left = 609.0
-offset_top = 24.0
-offset_right = 785.0
-offset_bottom = 60.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -544.0
+offset_top = 21.0
+offset_right = -368.0
+offset_bottom = 57.0
+grow_horizontal = 0
 theme_override_font_sizes/font_size = 20
 text = "Water Inventory:"
 
