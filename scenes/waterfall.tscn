@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://c6iqwo6p5u5l0"]
 
-[ext_resource type="Script" path="res://scripts/waterfall.gd" id="1_g2eur"]
+[ext_resource type="Script" uid="uid://1mpwhxnl57ir" path="res://scripts/waterfall.gd" id="1_g2eur"]
 [ext_resource type="Texture2D" uid="uid://ce00uknmnea84" path="res://assets/sprites/Waterfall-Sheet.png" id="1_rfic3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4p1xw"]

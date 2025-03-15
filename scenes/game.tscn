@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://cmisf2swqak7u"]
+[gd_scene load_steps=43 format=3 uid="uid://cmisf2swqak7u"]
 
 [ext_resource type="Script" uid="uid://bnqvhus63h3i0" path="res://scripts/dialouge_box.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://dfw2o7eoxxn6g" path="res://tile_map.tscn" id="1_txyxy"]
@@ -31,7 +31,10 @@
 [ext_resource type="PackedScene" uid="uid://b8hpmq4l6hy01" path="res://scenes/irrigation_channel.tscn" id="30_m0jmy"]
 [ext_resource type="PackedScene" uid="uid://daq8tlouvmmen" path="res://scenes/onion.tscn" id="30_sgl2t"]
 [ext_resource type="PackedScene" uid="uid://c6iqwo6p5u5l0" path="res://scenes/waterfall.tscn" id="31_bm1bo"]
-[ext_resource type="PackedScene" path="res://scenes/Well.tscn" id="32_ru2y7"]
+[ext_resource type="PackedScene" uid="uid://dlh033fa5bq1t" path="res://scenes/Well.tscn" id="32_ru2y7"]
+[ext_resource type="PackedScene" uid="uid://cethe3ha2ypqm" path="res://scenes/red_hair_villager.tscn" id="33_v2yb1"]
+[ext_resource type="PackedScene" uid="uid://bklwoqbaarc26" path="res://scenes/finalvillager.tscn" id="34_js0lu"]
+[ext_resource type="PackedScene" uid="uid://bhgmol6kgav5y" path="res://scenes/red_hair_girl.tscn" id="35_gxtfn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gee14"]
 bg_color = Color(0, 0, 0.133333, 1)
@@ -791,3 +794,12 @@ position = Vector2(2812, 899)
 [node name="well" parent="." instance=ExtResource("32_ru2y7")]
 z_index = 1
 position = Vector2(2815, 776)
+
+[node name="RedHairVillager" parent="." instance=ExtResource("33_v2yb1")]
+position = Vector2(673, 843)
+
+[node name="finalvillager" parent="." instance=ExtResource("34_js0lu")]
+position = Vector2(1267, 1439)
+
+[node name="Red_hair_girl" parent="." instance=ExtResource("35_gxtfn")]
+position = Vector2(2371, 932)
