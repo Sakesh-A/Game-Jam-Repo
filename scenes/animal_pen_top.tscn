@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://w1nsqy7inq2w"]
+
+[ext_resource type="Texture2D" uid="uid://bugtv56m2c0qp" path="res://assets/tileset/Tileset (2).png" id="1_uxbed"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1qtum"]
+size = Vector2(613.5, 41)
+
+[node name="Top Fence" type="StaticBody2D"]
+
+[node name="fence1" type="Sprite2D" parent="."]
+position = Vector2(3, -41)
+scale = Vector2(4.74875, 4.74875)
+texture = ExtResource("1_uxbed")
+region_enabled = true
+region_rect = Rect2(431.616, 240.111, 48.9984, 16.5084)
+
+[node name="fence1" type="Sprite2D" parent="fence1"]
+position = Vector2(-43.7501, -0.271678)
+scale = Vector2(0.986861, 0.996968)
+texture = ExtResource("1_uxbed")
+region_enabled = true
+region_rect = Rect2(431.616, 240.111, 48.9984, 16.5084)
+
+[node name="fence2" type="Sprite2D" parent="fence1"]
+position = Vector2(43.7198, -0.0594295)
+scale = Vector2(0.988124, 0.993178)
+texture = ExtResource("1_uxbed")
+region_enabled = true
+region_rect = Rect2(431.616, 240.111, 48.9984, 16.5084)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4.25, -31)
+shape = SubResource("RectangleShape2D_1qtum")

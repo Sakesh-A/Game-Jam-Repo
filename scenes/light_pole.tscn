@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://c58pm5fl5f3sm"]
+
+[ext_resource type="Texture2D" uid="uid://cer6o2onihbwu" path="res://assets/sprites/objects.png" id="1_4xgx0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_avsvi"]
+radius = 23.0
+height = 46.0
+
+[node name="Light Pole 1" type="StaticBody2D"]
+
+[node name="Light" type="Sprite2D" parent="."]
+position = Vector2(4, -115)
+scale = Vector2(7.5, 7.5)
+texture = ExtResource("1_4xgx0")
+region_enabled = true
+region_rect = Rect2(291.043, 125.641, 27.9867, 34.2841)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -9)
+shape = SubResource("CapsuleShape2D_avsvi")

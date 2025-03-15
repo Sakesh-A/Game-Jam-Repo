@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ywy1py7dbanl"]
+
+[ext_resource type="Texture2D" uid="uid://bugtv56m2c0qp" path="res://assets/tileset/Tileset (2).png" id="1_w4yvi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1qtum"]
+size = Vector2(10, 206)
+
+[node name="Side Fence" type="StaticBody2D"]
+
+[node name="fence1" type="Sprite2D" parent="."]
+position = Vector2(3, -41)
+scale = Vector2(4.74875, 4.74875)
+texture = ExtResource("1_w4yvi")
+region_enabled = true
+region_rect = Rect2(476.215, 240.527, 4.23328, 47.8596)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -42)
+shape = SubResource("RectangleShape2D_1qtum")

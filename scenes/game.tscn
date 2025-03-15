@@ -1,6 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://cmisf2swqak7u"]
+[gd_scene load_steps=23 format=3 uid="uid://cmisf2swqak7u"]
 
-[ext_resource type="Script" uid="uid://bnqvhus63h3i0" path="res://scripts/dialouge_box.gd" id="1_p57ef"]
+[ext_resource type="Script" path="res://scripts/dialouge_box.gd" id="1_p57ef"]
+[ext_resource type="PackedScene" uid="uid://dfw2o7eoxxn6g" path="res://tile_map.tscn" id="1_txyxy"]
 [ext_resource type="PackedScene" uid="uid://d2jxw073qk3kf" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://dej48tc2kyvnq" path="res://scripts/Water_bar.gd" id="2_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://dmg1sfr2q6g1m" path="res://scenes/tree.tscn" id="2_yqjtg"]
@@ -10,6 +11,21 @@
 [ext_resource type="Script" uid="uid://d2qewnu44uixs" path="res://scripts/plant_health.gd" id="4_kvpfn"]
 [ext_resource type="Script" uid="uid://dpx7qwcbd5f14" path="res://scripts/livestock_health.gd" id="5_dinhu"]
 [ext_resource type="PackedScene" uid="uid://ug02kkc308df" path="res://scenes/villager_man.tscn" id="5_p57ef"]
+[ext_resource type="PackedScene" uid="uid://c47uv3ufjn4ce" path="res://scenes/house1.tscn" id="8_ka531"]
+[ext_resource type="PackedScene" uid="uid://cimwvqb08sgtf" path="res://scenes/house2.tscn" id="9_xfgfn"]
+[ext_resource type="PackedScene" uid="uid://ctfuv5q6tlrwc" path="res://scenes/house3.tscn" id="10_3bf6p"]
+[ext_resource type="PackedScene" uid="uid://w1nsqy7inq2w" path="res://scenes/animal_pen_top.tscn" id="11_myqph"]
+[ext_resource type="PackedScene" uid="uid://ywy1py7dbanl" path="res://scenes/animal_pen_side.tscn" id="12_0xud7"]
+[ext_resource type="PackedScene" uid="uid://c58pm5fl5f3sm" path="res://scenes/light_pole.tscn" id="13_wm60a"]
+[ext_resource type="PackedScene" uid="uid://c7fsq6pbujp8f" path="res://scenes/flower_bed.tscn" id="14_o7md6"]
+[ext_resource type="PackedScene" uid="uid://bj44unxipropt" path="res://scenes/flower1.tscn" id="15_psqdk"]
+[ext_resource type="PackedScene" uid="uid://vw5mmk17pjae" path="res://scenes/chair_bench.tscn" id="16_s3mr8"]
+[ext_resource type="PackedScene" uid="uid://bo0aqquqqtd8u" path="res://scenes/house4.tscn" id="17_us0lq"]
+[ext_resource type="PackedScene" uid="uid://0tfkyggbo3aw" path="res://scenes/bushes_top.tscn" id="18_86lrx"]
+[ext_resource type="PackedScene" uid="uid://bfh8rkgo6nv7u" path="res://scenes/bushes_side.tscn" id="19_56k38"]
+[ext_resource type="PackedScene" uid="uid://dhprhad4nsj0i" path="res://scenes/logstack.tscn" id="20_e6ajy"]
+[ext_resource type="PackedScene" uid="uid://eit51i4l4ru2" path="res://scenes/axe_logs.tscn" id="21_tcmcr"]
+[ext_resource type="PackedScene" uid="uid://bkq2w2w1vhr4d" path="res://scenes/flower2.tscn" id="22_jrdmb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gee14"]
 bg_color = Color(0, 0, 0.133333, 1)
@@ -70,19 +86,20 @@ corner_radius_bottom_left = 8
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
 
+[node name="TileMap" parent="." instance=ExtResource("1_txyxy")]
+z_index = -1
+position = Vector2(1521, 974)
+scale = Vector2(5, 5)
+layer_0/tile_data = PackedInt32Array(-196617, 524288, 1, -327689, 524288, 1, -262153, 131072, 2, -262152, 131072, 2, 196619, 655363, 14, 196620, 655363, 14, 196621, 655363, 14, 196622, 655363, 13, 196618, 262147, 14, 262157, 1048579, 14, 262158, 1048579, 14, 327691, 524288, 1)
+
 [node name="Terrain" type="CanvasLayer" parent="."]
 layer = -1
-
-[node name="ColorRect" type="ColorRect" parent="Terrain"]
-offset_right = 85.0
-offset_bottom = 91.0
-scale = Vector2(28.7925, 16.2013)
-color = Color(0.498627, 0.898115, 0.439274, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 5
 
 [node name="DialogueBox" type="ColorRect" parent="CanvasLayer"]
+visible = false
 offset_left = 702.0
 offset_top = 442.0
 offset_right = 1502.0
@@ -193,14 +210,16 @@ placeholder_text = "Soil health:"
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 position = Vector2(1350, 781)
 
+[node name="Camera2D2" type="Camera2D" parent="Player"]
+
 [node name="Tree" parent="." instance=ExtResource("2_yqjtg")]
-position = Vector2(377, 429)
+position = Vector2(238, 330)
 
 [node name="Tree2" parent="." instance=ExtResource("2_yqjtg")]
-position = Vector2(1363, 445)
+position = Vector2(1936, 530)
 
 [node name="Tree3" parent="." instance=ExtResource("2_yqjtg")]
-position = Vector2(1004, 229)
+position = Vector2(976, 301)
 
 [node name="Farmer" parent="." instance=ExtResource("3_lnu2h")]
 position = Vector2(272, 904)
@@ -210,3 +229,313 @@ position = Vector2(1463, 754)
 
 [node name="Villager Man" parent="." instance=ExtResource("5_p57ef")]
 position = Vector2(675, 211)
+
+[node name="House" parent="." instance=ExtResource("8_ka531")]
+y_sort_enabled = true
+position = Vector2(2101, 930)
+
+[node name="House2" parent="." instance=ExtResource("9_xfgfn")]
+position = Vector2(1451, 1475)
+
+[node name="House3" parent="." instance=ExtResource("10_3bf6p")]
+position = Vector2(796, 808)
+
+[node name="Top Fence" parent="." instance=ExtResource("11_myqph")]
+position = Vector2(423, 1554)
+
+[node name="Top Fence2" parent="." instance=ExtResource("11_myqph")]
+position = Vector2(424, 2011)
+
+[node name="Side Fence2" parent="." instance=ExtResource("12_0xud7")]
+position = Vector2(112, 1779)
+
+[node name="Side Fence3" parent="Side Fence2" instance=ExtResource("12_0xud7")]
+position = Vector2(1, 150)
+
+[node name="Side Fence" parent="." instance=ExtResource("12_0xud7")]
+position = Vector2(111, 1626)
+
+[node name="Side Fence" parent="Side Fence" instance=ExtResource("12_0xud7")]
+position = Vector2(110, 1631)
+
+[node name="Side Fence6" parent="." instance=ExtResource("12_0xud7")]
+position = Vector2(736, 1942)
+
+[node name="Side Fence5" parent="." instance=ExtResource("12_0xud7")]
+position = Vector2(737, 1787)
+
+[node name="Side Fence4" parent="." instance=ExtResource("12_0xud7")]
+position = Vector2(735, 1631)
+
+[node name="Tree4" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(111, 1390)
+
+[node name="Tree5" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(2372, 753)
+
+[node name="Tree6" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(992, 1192)
+
+[node name="Tree7" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(1590, 1858)
+
+[node name="Tree8" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(2681, 920)
+
+[node name="Tree9" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(2010, 2008)
+
+[node name="Tree10" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(2169, 280)
+
+[node name="Light Pole 1" parent="." instance=ExtResource("13_wm60a")]
+position = Vector2(1598, 982)
+
+[node name="Light Pole 2" parent="." instance=ExtResource("13_wm60a")]
+position = Vector2(1133, 1391)
+
+[node name="Light Pole 3" parent="." instance=ExtResource("13_wm60a")]
+position = Vector2(2539, 591)
+
+[node name="Light Pole 4" parent="." instance=ExtResource("13_wm60a")]
+position = Vector2(447, 501)
+
+[node name="Light Pole 5" parent="." instance=ExtResource("14_o7md6")]
+position = Vector2(1852, 980)
+
+[node name="Light Pole 6" parent="." instance=ExtResource("15_psqdk")]
+position = Vector2(2640, 1028)
+
+[node name="Light Pole 7" parent="." instance=ExtResource("15_psqdk")]
+position = Vector2(58, 586)
+
+[node name="Light Pole 8" parent="." instance=ExtResource("15_psqdk")]
+position = Vector2(961, 820)
+
+[node name="Light Pole 9" parent="." instance=ExtResource("15_psqdk")]
+position = Vector2(2091, 396)
+
+[node name="Chair Bench" parent="." instance=ExtResource("16_s3mr8")]
+position = Vector2(1259, 909)
+
+[node name="Chair Bench2" parent="." instance=ExtResource("16_s3mr8")]
+position = Vector2(2747, 506)
+
+[node name="House4" parent="." instance=ExtResource("17_us0lq")]
+position = Vector2(1442, 470)
+
+[node name="Top Fence3" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(73, 14)
+
+[node name="Top Fence4" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(279, 14)
+
+[node name="Top Fence5" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(483, 14)
+
+[node name="Top Fence6" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(702, 13)
+
+[node name="Top Fence7" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(911, 13)
+
+[node name="Top Bush" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(1131, 12)
+
+[node name="Top Bush2" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(1340, 12)
+
+[node name="Top Bush3" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(1549, 13)
+
+[node name="Top Bush4" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(1760, 13)
+
+[node name="Top Bush5" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(1971, 13)
+
+[node name="Top Bush6" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(2183, 14)
+
+[node name="Top Bush7" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(2392, 13)
+
+[node name="Top Bush8" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(2600, 13)
+
+[node name="Top Bush9" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(2805, 13)
+
+[node name="Top Bush10" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(3008, 12)
+
+[node name="Top Bush11" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(3204, 13)
+
+[node name="Side Bush" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(3281, 65)
+
+[node name="Side Bush2" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(3281, 199)
+
+[node name="Side Bush3" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(3281, 335)
+
+[node name="Side Bush4" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(3281, 457)
+
+[node name="Side Bush5" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(3281, 589)
+
+[node name="Side Bush6" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(3281, 719)
+
+[node name="Side Bush7" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(3281, 856)
+
+[node name="Side Bush8" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(3281, 991)
+
+[node name="Side Bush9" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(3281, 1126)
+
+[node name="Side Bush10" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(3281, 1253)
+
+[node name="Side Bush11" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(3281, 1386)
+
+[node name="Side Bush12" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(3280, 1518)
+
+[node name="Side Bush13" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(3279, 1644)
+
+[node name="Side Bush14" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(3279, 1778)
+
+[node name="Side Bush15" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(3280, 1907)
+
+[node name="Side Bush16" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(3280, 2030)
+
+[node name="Side Bush17" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(3280, 2109)
+
+[node name="Top Bush12" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(3207, 2145)
+
+[node name="Top Bush13" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(2992, 2143)
+
+[node name="Top Bush14" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(2781, 2142)
+
+[node name="Top Bush15" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(2568, 2142)
+
+[node name="Top Bush16" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(2353, 2142)
+
+[node name="Top Bush17" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(2135, 2142)
+
+[node name="Top Bush18" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(1919, 2142)
+
+[node name="Top Bush19" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(1702, 2142)
+
+[node name="Top Bush20" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(1485, 2141)
+
+[node name="Top Bush21" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(1268, 2141)
+
+[node name="Top Bush22" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(1056, 2141)
+
+[node name="Top Bush23" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(843, 2141)
+
+[node name="Top Bush24" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(629, 2142)
+
+[node name="Top Bush25" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(417, 2141)
+
+[node name="Top Bush26" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(203, 2140)
+
+[node name="Top Bush27" parent="." instance=ExtResource("18_86lrx")]
+position = Vector2(8, 2140)
+
+[node name="Side Bush18" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(-69, 2039)
+
+[node name="Side Bush19" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(-69, 1906)
+
+[node name="Side Bush20" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(-69, 1771)
+
+[node name="Side Bush21" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(-69, 1636)
+
+[node name="Side Bush22" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(-69, 1501)
+
+[node name="Side Bush23" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(-69, 1368)
+
+[node name="Side Bush24" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(-68, 1232)
+
+[node name="Side Bush25" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(-68, 1099)
+
+[node name="Side Bush26" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(-68, 960)
+
+[node name="Side Bush27" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(-68, 826)
+
+[node name="Side Bush28" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(-68, 691)
+
+[node name="Side Bush29" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(-68, 560)
+
+[node name="Side Bush30" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(-68, 430)
+
+[node name="Side Bush31" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(-68, 300)
+
+[node name="Side Bush32" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(-68, 170)
+
+[node name="Side Bush33" parent="." instance=ExtResource("19_56k38")]
+position = Vector2(-69, 47)
+
+[node name="Log stack" parent="." instance=ExtResource("20_e6ajy")]
+position = Vector2(616, 842)
+
+[node name="Log stack2" parent="." instance=ExtResource("20_e6ajy")]
+position = Vector2(1612, 472)
+
+[node name="Log stack3" parent="." instance=ExtResource("20_e6ajy")]
+position = Vector2(2276, 1009)
+
+[node name="Axe in Log" parent="." instance=ExtResource("21_tcmcr")]
+position = Vector2(1748, 565)
+
+[node name="Pink Flower" parent="." instance=ExtResource("22_jrdmb")]
+position = Vector2(1225, 1391)
+
+[node name="Pink Flower2" parent="." instance=ExtResource("22_jrdmb")]
+position = Vector2(1389, 905)
+
+[node name="Tree11" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(3022, 1157)
