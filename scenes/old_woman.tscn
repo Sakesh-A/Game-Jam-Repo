@@ -1,0 +1,83 @@
+[gd_scene load_steps=13 format=3 uid="uid://c8jr41286oi7o"]
+
+[ext_resource type="Script" uid="uid://crg7cob6g1ge5" path="res://scripts/old_woman.gd" id="1_lch7j"]
+[ext_resource type="Texture2D" uid="uid://bnghd2mks2kh4" path="res://assets/sprites/old_woman.png" id="2_lch7j"]
+[ext_resource type="Texture2D" uid="uid://dfd8hjwst2ayp" path="res://assets/sprites/icons.png" id="3_anxks"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_anxks"]
+atlas = ExtResource("2_lch7j")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5flt1"]
+atlas = ExtResource("2_lch7j")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vopfg"]
+atlas = ExtResource("2_lch7j")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nb1f7"]
+atlas = ExtResource("2_lch7j")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_go23t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_anxks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5flt1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vopfg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nb1f7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hkter"]
+radius = 21.0238
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ha3y"]
+atlas = ExtResource("3_anxks")
+region = Rect2(37, 153, 10, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73ou4"]
+atlas = ExtResource("3_anxks")
+region = Rect2(59, 157, 6, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3n3p8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ha3y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73ou4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="OldWoman" type="StaticBody2D"]
+script = ExtResource("1_lch7j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_go23t")
+animation = &"idle"
+offset = Vector2(0, -12.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hkter")
+
+[node name="InteractionIcon" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -101)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_3n3p8")

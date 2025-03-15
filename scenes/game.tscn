@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=3 uid="uid://cmisf2swqak7u"]
+
+[ext_resource type="Script" uid="uid://bnqvhus63h3i0" path="res://scripts/dialouge_box.gd" id="1_p57ef"]
+[ext_resource type="PackedScene" uid="uid://d2jxw073qk3kf" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://dmg1sfr2q6g1m" path="res://scenes/tree.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://bvpvgirp14b33" path="res://scenes/farmer.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://c8jr41286oi7o" path="res://scenes/old_woman.tscn" id="4_iywne"]
+[ext_resource type="PackedScene" uid="uid://ug02kkc308df" path="res://scenes/villager_man.tscn" id="5_p57ef"]
+
+[node name="Game" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Terrain" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="Terrain"]
+offset_right = 85.0
+offset_bottom = 91.0
+scale = Vector2(28.7925, 16.2013)
+color = Color(0.498627, 0.898115, 0.439274, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 5
+
+[node name="DialogueBox" type="ColorRect" parent="CanvasLayer"]
+offset_left = 702.0
+offset_top = 442.0
+offset_right = 1502.0
+offset_bottom = 942.0
+color = Color(0.497474, 0.497474, 0.497474, 1)
+script = ExtResource("1_p57ef")
+
+[node name="DialogueText" type="Label" parent="CanvasLayer/DialogueBox"]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 168.0
+offset_right = 138.0
+offset_bottom = 191.0
+text = "b"
+
+[node name="Player" parent="." instance=ExtResource("1_uwrxv")]
+position = Vector2(1350, 781)
+
+[node name="Tree" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(377, 429)
+
+[node name="Tree2" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(1363, 445)
+
+[node name="Tree3" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(1004, 229)
+
+[node name="Farmer" parent="." instance=ExtResource("3_lnu2h")]
+position = Vector2(272, 904)
+
+[node name="Old Woman" parent="." instance=ExtResource("4_iywne")]
+position = Vector2(1463, 754)
+
+[node name="Villager Man" parent="." instance=ExtResource("5_p57ef")]
+position = Vector2(675, 211)
