@@ -1,4 +1,4 @@
-extends Node2D
+extends StaticBody2D
 
 @export var interaction_distance: float = 100.0 # Adjust based on your game
 @export var npc_dialogue: String = "Hello, traveler! I am an old woman.\n

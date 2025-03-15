@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cmisf2swqak7u"]
+[gd_scene load_steps=9 format=3 uid="uid://cmisf2swqak7u"]
 
 [ext_resource type="Script" uid="uid://bnqvhus63h3i0" path="res://scripts/dialogue_box.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://d2jxw073qk3kf" path="res://scenes/player.tscn" id="1_uwrxv"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c8jr41286oi7o" path="res://scenes/old_woman.tscn" id="4_iywne"]
 [ext_resource type="PackedScene" uid="uid://ug02kkc308df" path="res://scenes/villager_man.tscn" id="5_p57ef"]
 [ext_resource type="PackedScene" uid="uid://d3k85tp2s2pai" path="res://scenes/shovel.tscn" id="7_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://dyshcm25ehrcs" path="res://scenes/chicken.tscn" id="8_gee14"]
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
@@ -63,3 +64,9 @@ position = Vector2(675, 211)
 
 [node name="Shovel" parent="." instance=ExtResource("7_u5sy4")]
 position = Vector2(1034, 831)
+
+[node name="Chicken" parent="." instance=ExtResource("8_gee14")]
+position = Vector2(644, 928)
+
+[node name="Chicken2" parent="." instance=ExtResource("8_gee14")]
+position = Vector2(555, 932)

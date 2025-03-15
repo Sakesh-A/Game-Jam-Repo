@@ -1,7 +1,7 @@
-extends Node2D
+extends StaticBody2D
 
 @export var interaction_distance: float = 100.0 # Adjust based on your game
-@export var npc_dialogue: String = "Hello, traveler! I am a farmer.\n 
+@export var npc_dialogue: String = "Hello, traveler! I am a farmer.\n
 We need to disable player movement when this window appears and offer two buttons to make a decision" # Unique dialogue per NPC
 
 @onready var player = get_node("/root/Game/Player")
