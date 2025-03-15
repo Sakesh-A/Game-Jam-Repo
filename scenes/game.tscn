@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://cmisf2swqak7u"]
+[gd_scene load_steps=12 format=3 uid="uid://cmisf2swqak7u"]
 
 [ext_resource type="Script" uid="uid://bnqvhus63h3i0" path="res://scripts/dialogue_box.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://d2jxw073qk3kf" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://dcbaejj35o6i2" path="res://scripts/next_day_button.gd" id="1_vtaks"]
 [ext_resource type="Script" uid="uid://36hhej23vbng" path="res://scripts/action_box.gd" id="2_0tnpc"]
+[ext_resource type="Script" uid="uid://siaecqckogm4" path="res://scripts/new_day_message.gd" id="2_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://dmg1sfr2q6g1m" path="res://scenes/tree.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://bvpvgirp14b33" path="res://scenes/farmer.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://c8jr41286oi7o" path="res://scenes/old_woman.tscn" id="4_iywne"]
@@ -38,6 +39,22 @@ grow_horizontal = 0
 scale = Vector2(2, 2)
 text = "Next Day"
 script = ExtResource("1_vtaks")
+
+[node name="DayMessage" type="ColorRect" parent="CanvasLayer"]
+offset_left = 702.0
+offset_top = 442.0
+offset_right = 1502.0
+offset_bottom = 942.0
+color = Color(0.497474, 0.497474, 0.497474, 1)
+script = ExtResource("2_kvpfn")
+
+[node name="DayText" type="Label" parent="CanvasLayer/DayMessage"]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 167.0
+offset_right = 137.0
+offset_bottom = 190.0
+text = "b"
 
 [node name="DialogueBox" type="ColorRect" parent="CanvasLayer"]
 offset_left = 702.0

@@ -47,8 +47,8 @@ func _action():
 		return  
 
 	GameManager.action_points -= cost
-	GameManager.soil_quality += 3
-	GameManager.hasWater += 1
+	GameManager.soil_quality += 1
+	GameManager.water += 3
 
 	# Mark as interacted and disable future interactions
 	interacted = true
