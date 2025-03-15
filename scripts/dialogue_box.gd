@@ -10,7 +10,7 @@ func _ready():
 	get_viewport().size_changed.connect(center_dialogue_box) # Update when window resizes
 	visible = false  # Start hidden
 
-func _process(delta):
+func _process(_delta):
 	center_dialogue_box()
 	if Input.is_action_just_pressed("close_dialogue"):
 		close_dialogue()
@@ -19,7 +19,7 @@ func center_dialogue_box():
 	var screen_size = get_viewport_rect().size
 	position = (screen_size / 2) - (size / 2)
 
-func open_dialogue(dialogue_text: String, path: String):
+func open_dialogue(dialogue_text: String, _path: String):
 	$DialogueText.text = dialogue_text
 	visible = true
 	can_close = false

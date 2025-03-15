@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://cmisf2swqak7u"]
+[gd_scene load_steps=11 format=3 uid="uid://cmisf2swqak7u"]
 
 [ext_resource type="Script" uid="uid://bnqvhus63h3i0" path="res://scripts/dialogue_box.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://d2jxw073qk3kf" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="Script" uid="uid://dcbaejj35o6i2" path="res://scripts/next_day_button.gd" id="1_vtaks"]
 [ext_resource type="Script" uid="uid://36hhej23vbng" path="res://scripts/action_box.gd" id="2_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://dmg1sfr2q6g1m" path="res://scenes/tree.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://bvpvgirp14b33" path="res://scenes/farmer.tscn" id="3_lnu2h"]
@@ -24,6 +25,19 @@ color = Color(0.498627, 0.898115, 0.439274, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 5
+
+[node name="NextDayButton" type="Button" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -167.0
+offset_top = 12.0
+offset_right = -88.0
+offset_bottom = 43.0
+grow_horizontal = 0
+scale = Vector2(2, 2)
+text = "Next Day"
+script = ExtResource("1_vtaks")
 
 [node name="DialogueBox" type="ColorRect" parent="CanvasLayer"]
 offset_left = 702.0
@@ -87,3 +101,6 @@ position = Vector2(644, 928)
 
 [node name="Chicken2" parent="." instance=ExtResource("8_gee14")]
 position = Vector2(555, 932)
+
+[node name="Shovel2" parent="." instance=ExtResource("7_u5sy4")]
+position = Vector2(819, 1106)

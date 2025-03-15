@@ -10,7 +10,7 @@ We need to disable player movement when this window appears and offer two button
 func _ready():
 	$InteractionIcon.visible = false # Hide the indicator initially
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	$AnimatedSprite2D.play("idle")
 	var direction = global_position.direction_to(player.global_position)
 

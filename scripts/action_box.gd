@@ -10,10 +10,8 @@ func _ready():
 	get_viewport().size_changed.connect(center_action_box) 
 	visible = false 
 
-func _process(delta):
+func _process(_delta):
 	center_action_box()
-	if visible and can_close and Input.is_action_just_pressed("interact"):
-		close_action()
 	if visible and Input.is_action_just_pressed("action"):
 		print("Attempting to call action on:", action_path) 
 		var action_node = get_node_or_null(action_path) 
@@ -23,7 +21,7 @@ func _process(delta):
 			print("Error: Node not found at path: " + action_path) 
 		close_action()
 	if visible and can_close and Input.is_action_just_pressed("close_dialogue"):
-		visible = false
+		close_action()
 
 func center_action_box():
 	var screen_size = get_viewport_rect().size

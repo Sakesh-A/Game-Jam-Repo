@@ -12,14 +12,17 @@ var interacted: bool = false  # Track if the object has already been used
 
 func _ready():
 	$InteractionIcon.visible = false # Hide the indicator initially
+	GameManager.next_day.connect(_next_day_started)
 
-func _process(delta: float) -> void:
+func _next_day_started():
+	interacted = false
+	cost = 2
+
+func _process(_delta: float) -> void:
 	# If already interacted, disable further interaction
 	if interacted:
 		$InteractionIcon.visible = false
 		return  
-
-	var direction = global_position.direction_to(player.global_position)
 
 	# Check if the player is within interaction range
 	if global_position.distance_to(player.global_position) < interaction_distance:
@@ -31,13 +34,12 @@ func _process(delta: float) -> void:
 			var action_text = action_description + str(cost) + "\n You have this many AP points: " + str(GameManager.action_points)
 			if GameManager.action_points < cost:
 				action_text += "\n Not enough points to buy"
-				dialogue_box.open_dialogue(action_text)
+				dialogue_box.open_dialogue(action_text, get_path())
 			else:
 				action_text += "\n Press E to buy"
 				action_box.open_action(action_text, get_path()) # Pass the _action function as a callback
 	else:
 		$InteractionIcon.visible = false # Hide indicator
-		action_box.visible = false
 
 func _action():
 	# Ensure action is performed only once
@@ -46,7 +48,7 @@ func _action():
 
 	GameManager.action_points -= cost
 	GameManager.soil_quality += 3
-	GameManager.hasWater = true
+	GameManager.hasWater += 1
 
 	# Mark as interacted and disable future interactions
 	interacted = true
