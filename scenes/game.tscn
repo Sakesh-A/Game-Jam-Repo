@@ -1,87 +1,27 @@
 [gd_scene load_steps=23 format=3 uid="uid://cmisf2swqak7u"]
 
-[ext_resource type="Script" path="res://scripts/dialouge_box.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://dfw2o7eoxxn6g" path="res://tile_map.tscn" id="1_txyxy"]
 [ext_resource type="PackedScene" uid="uid://d2jxw073qk3kf" path="res://scenes/player.tscn" id="1_uwrxv"]
-[ext_resource type="Script" uid="uid://dej48tc2kyvnq" path="res://scripts/Water_bar.gd" id="2_u5sy4"]
+[ext_resource type="Script" path="res://scenes/dialogue_box.gd" id="2_wjvfj"]
 [ext_resource type="PackedScene" uid="uid://dmg1sfr2q6g1m" path="res://scenes/tree.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://bvpvgirp14b33" path="res://scenes/farmer.tscn" id="3_lnu2h"]
-[ext_resource type="Script" uid="uid://0xojn8gtfu2i" path="res://scripts/soil_health.gd" id="3_vtaks"]
 [ext_resource type="PackedScene" uid="uid://c8jr41286oi7o" path="res://scenes/old_woman.tscn" id="4_iywne"]
-[ext_resource type="Script" uid="uid://d2qewnu44uixs" path="res://scripts/plant_health.gd" id="4_kvpfn"]
-[ext_resource type="Script" uid="uid://dpx7qwcbd5f14" path="res://scripts/livestock_health.gd" id="5_dinhu"]
 [ext_resource type="PackedScene" uid="uid://ug02kkc308df" path="res://scenes/villager_man.tscn" id="5_p57ef"]
-[ext_resource type="PackedScene" uid="uid://c47uv3ufjn4ce" path="res://scenes/house1.tscn" id="8_ka531"]
-[ext_resource type="PackedScene" uid="uid://cimwvqb08sgtf" path="res://scenes/house2.tscn" id="9_xfgfn"]
-[ext_resource type="PackedScene" uid="uid://ctfuv5q6tlrwc" path="res://scenes/house3.tscn" id="10_3bf6p"]
-[ext_resource type="PackedScene" uid="uid://w1nsqy7inq2w" path="res://scenes/animal_pen_top.tscn" id="11_myqph"]
-[ext_resource type="PackedScene" uid="uid://ywy1py7dbanl" path="res://scenes/animal_pen_side.tscn" id="12_0xud7"]
-[ext_resource type="PackedScene" uid="uid://c58pm5fl5f3sm" path="res://scenes/light_pole.tscn" id="13_wm60a"]
-[ext_resource type="PackedScene" uid="uid://c7fsq6pbujp8f" path="res://scenes/flower_bed.tscn" id="14_o7md6"]
-[ext_resource type="PackedScene" uid="uid://bj44unxipropt" path="res://scenes/flower1.tscn" id="15_psqdk"]
-[ext_resource type="PackedScene" uid="uid://vw5mmk17pjae" path="res://scenes/chair_bench.tscn" id="16_s3mr8"]
-[ext_resource type="PackedScene" uid="uid://bo0aqquqqtd8u" path="res://scenes/house4.tscn" id="17_us0lq"]
-[ext_resource type="PackedScene" uid="uid://0tfkyggbo3aw" path="res://scenes/bushes_top.tscn" id="18_86lrx"]
-[ext_resource type="PackedScene" uid="uid://bfh8rkgo6nv7u" path="res://scenes/bushes_side.tscn" id="19_56k38"]
-[ext_resource type="PackedScene" uid="uid://dhprhad4nsj0i" path="res://scenes/logstack.tscn" id="20_e6ajy"]
-[ext_resource type="PackedScene" uid="uid://eit51i4l4ru2" path="res://scenes/axe_logs.tscn" id="21_tcmcr"]
-[ext_resource type="PackedScene" uid="uid://bkq2w2w1vhr4d" path="res://scenes/flower2.tscn" id="22_jrdmb"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gee14"]
-bg_color = Color(0, 0, 0.133333, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0tnpc"]
-bg_color = Color(0.403511, 0.622839, 0.81662, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u5sy4"]
-bg_color = Color(0, 0, 0.133333, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vtaks"]
-bg_color = Color(0.773326, 0.532642, 0.460002, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvpfn"]
-bg_color = Color(0, 0, 0.133333, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dinhu"]
-bg_color = Color(0.302243, 0.695689, 0.394513, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kvuet"]
-bg_color = Color(0, 0, 0.133333, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trtic"]
-bg_color = Color(0.952941, 0.0470588, 0.117647, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
+[ext_resource type="PackedScene" path="res://scenes/house1.tscn" id="8_ka531"]
+[ext_resource type="PackedScene" path="res://scenes/house2.tscn" id="9_xfgfn"]
+[ext_resource type="PackedScene" path="res://scenes/house3.tscn" id="10_3bf6p"]
+[ext_resource type="PackedScene" path="res://scenes/animal_pen_top.tscn" id="11_myqph"]
+[ext_resource type="PackedScene" path="res://scenes/animal_pen_side.tscn" id="12_0xud7"]
+[ext_resource type="PackedScene" path="res://scenes/light_pole.tscn" id="13_wm60a"]
+[ext_resource type="PackedScene" path="res://scenes/flower_bed.tscn" id="14_o7md6"]
+[ext_resource type="PackedScene" path="res://scenes/flower1.tscn" id="15_psqdk"]
+[ext_resource type="PackedScene" path="res://scenes/chair_bench.tscn" id="16_s3mr8"]
+[ext_resource type="PackedScene" path="res://scenes/house4.tscn" id="17_us0lq"]
+[ext_resource type="PackedScene" path="res://scenes/bushes_top.tscn" id="18_86lrx"]
+[ext_resource type="PackedScene" path="res://scenes/bushes_side.tscn" id="19_56k38"]
+[ext_resource type="PackedScene" path="res://scenes/logstack.tscn" id="20_e6ajy"]
+[ext_resource type="PackedScene" path="res://scenes/axe_logs.tscn" id="21_tcmcr"]
+[ext_resource type="PackedScene" path="res://scenes/flower2.tscn" id="22_jrdmb"]
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
@@ -105,7 +45,7 @@ offset_top = 442.0
 offset_right = 1502.0
 offset_bottom = 942.0
 color = Color(0.497474, 0.497474, 0.497474, 1)
-script = ExtResource("1_p57ef")
+script = ExtResource("2_wjvfj")
 
 [node name="DialogueText" type="Label" parent="CanvasLayer/DialogueBox"]
 layout_mode = 0
@@ -114,98 +54,6 @@ offset_top = 168.0
 offset_right = 138.0
 offset_bottom = 191.0
 text = "b"
-
-[node name="WaterProgress" type="ProgressBar" parent="CanvasLayer"]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -366.0
-offset_top = 17.0
-offset_right = -34.0
-offset_bottom = 61.0
-grow_horizontal = 0
-theme_override_styles/background = SubResource("StyleBoxFlat_gee14")
-theme_override_styles/fill = SubResource("StyleBoxFlat_0tnpc")
-step = 1.0
-value = 50.0
-script = ExtResource("2_u5sy4")
-
-[node name="SoilHealth" type="ProgressBar" parent="CanvasLayer"]
-offset_left = 1555.0
-offset_top = 197.0
-offset_right = 1891.0
-offset_bottom = 243.0
-theme_override_styles/background = SubResource("StyleBoxFlat_u5sy4")
-theme_override_styles/fill = SubResource("StyleBoxFlat_vtaks")
-step = 1.0
-value = 50.0
-script = ExtResource("3_vtaks")
-
-[node name="PlantHealth" type="ProgressBar" parent="CanvasLayer"]
-offset_left = 1556.0
-offset_top = 136.0
-offset_right = 1890.0
-offset_bottom = 182.0
-theme_override_styles/background = SubResource("StyleBoxFlat_kvpfn")
-theme_override_styles/fill = SubResource("StyleBoxFlat_dinhu")
-step = 1.0
-value = 50.0
-script = ExtResource("4_kvpfn")
-
-[node name="LivestockHealth" type="ProgressBar" parent="CanvasLayer"]
-offset_left = 1555.0
-offset_top = 77.0
-offset_right = 1888.0
-offset_bottom = 122.0
-theme_override_styles/background = SubResource("StyleBoxFlat_kvuet")
-theme_override_styles/fill = SubResource("StyleBoxFlat_trtic")
-step = 1.0
-value = 50.0
-script = ExtResource("5_dinhu")
-
-[node name="WaterLabel" type="LineEdit" parent="CanvasLayer"]
-offset_left = 1376.0
-offset_top = 20.0
-offset_right = 1552.0
-offset_bottom = 56.0
-theme_override_font_sizes/font_size = 20
-text = "Water Inventory:"
-
-[node name="Livesotck Label" type="LineEdit" parent="CanvasLayer"]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -544.0
-offset_top = 82.0
-offset_right = -369.0
-offset_bottom = 118.0
-grow_horizontal = 0
-theme_override_font_sizes/font_size = 20
-placeholder_text = "Livestock Health:"
-
-[node name="LineEdit" type="LineEdit" parent="CanvasLayer"]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -504.0
-offset_top = 134.0
-offset_right = -365.0
-offset_bottom = 170.0
-grow_horizontal = 0
-theme_override_font_sizes/font_size = 20
-text = "Plant Health:"
-
-[node name="LineEdit2" type="LineEdit" parent="CanvasLayer"]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -489.0
-offset_top = 200.0
-offset_right = -369.0
-offset_bottom = 236.0
-grow_horizontal = 0
-theme_override_font_sizes/font_size = 20
-placeholder_text = "Soil health:"
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 position = Vector2(1350, 781)
