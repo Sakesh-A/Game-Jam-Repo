@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bj44unxipropt"]
+
+[ext_resource type="Texture2D" uid="uid://cer6o2onihbwu" path="res://assets/sprites/objects.png" id="1_kiq0w"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_avsvi"]
+radius = 25.0
+height = 50.0
+
+[node name="blue flower" type="StaticBody2D"]
+
+[node name="flower" type="Sprite2D" parent="."]
+position = Vector2(0, -30)
+scale = Vector2(5.32692, 5.32692)
+texture = ExtResource("1_kiq0w")
+region_enabled = true
+region_rect = Rect2(481.358, 1.19183, 14.1805, 13.2557)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -25)
+shape = SubResource("CapsuleShape2D_avsvi")

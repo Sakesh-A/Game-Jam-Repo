@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhprhad4nsj0i"]
+
+[ext_resource type="Texture2D" uid="uid://cer6o2onihbwu" path="res://assets/sprites/objects.png" id="1_vy0sh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_avsvi"]
+radius = 26.0
+height = 66.0
+
+[node name="Log stack" type="StaticBody2D"]
+
+[node name="logs" type="Sprite2D" parent="."]
+position = Vector2(-0.999994, -64)
+scale = Vector2(5.32692, 5.32692)
+texture = ExtResource("1_vy0sh")
+region_enabled = true
+region_rect = Rect2(350.698, 89.5888, 17.5817, 23.7939)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -47)
+shape = SubResource("CapsuleShape2D_avsvi")
