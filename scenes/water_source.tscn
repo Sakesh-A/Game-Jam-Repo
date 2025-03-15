@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://b5nwhjve7ytn1"]
+[gd_scene load_steps=2 format=3 uid="uid://bxqul35lpirq0"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_avsvi"]
-radius = 50.0
-height = 100.0
+radius = 108.0
+height = 216.0
 
 [node name="Water Source" type="StaticBody2D"]
 

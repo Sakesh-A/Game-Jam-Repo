@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://cmisf2swqak7u"]
+[gd_scene load_steps=37 format=3 uid="uid://cmisf2swqak7u"]
 
 [ext_resource type="Script" path="res://scripts/dialouge_box.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://dfw2o7eoxxn6g" path="res://tile_map.tscn" id="1_txyxy"]
@@ -27,6 +27,7 @@
 [ext_resource type="PackedScene" path="res://scenes/logstack.tscn" id="20_e6ajy"]
 [ext_resource type="PackedScene" path="res://scenes/axe_logs.tscn" id="21_tcmcr"]
 [ext_resource type="PackedScene" path="res://scenes/flower2.tscn" id="22_jrdmb"]
+[ext_resource type="PackedScene" uid="uid://bxqul35lpirq0" path="res://scenes/water_source.tscn" id="28_1lmdh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gee14"]
 bg_color = Color(0, 0, 0.133333, 1)
@@ -223,6 +224,10 @@ offset_bottom = 236.0
 grow_horizontal = 0
 theme_override_font_sizes/font_size = 20
 placeholder_text = "Soil health:"
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 position = Vector2(1350, 781)
@@ -587,3 +592,48 @@ position = Vector2(366, 1880)
 
 [node name="Chicken10" parent="." instance=ExtResource("7_qnb83")]
 position = Vector2(612, 1760)
+
+[node name="Water Source" parent="." instance=ExtResource("28_1lmdh")]
+position = Vector2(2172, 1424)
+
+[node name="Water Source2" parent="." instance=ExtResource("28_1lmdh")]
+position = Vector2(2233, 1479)
+
+[node name="Water Source3" parent="." instance=ExtResource("28_1lmdh")]
+position = Vector2(2313, 1358)
+
+[node name="Water Source4" parent="." instance=ExtResource("28_1lmdh")]
+position = Vector2(2478, 1345)
+
+[node name="Water Source5" parent="." instance=ExtResource("28_1lmdh")]
+position = Vector2(2567, 1271)
+
+[node name="Water Source6" parent="." instance=ExtResource("28_1lmdh")]
+position = Vector2(2736, 1276)
+
+[node name="Water Source7" parent="." instance=ExtResource("28_1lmdh")]
+position = Vector2(2821, 1270)
+
+[node name="Water Source8" parent="." instance=ExtResource("28_1lmdh")]
+position = Vector2(2891, 1350)
+
+[node name="Water Source9" parent="." instance=ExtResource("28_1lmdh")]
+position = Vector2(2965, 1416)
+
+[node name="Water Source10" parent="." instance=ExtResource("28_1lmdh")]
+position = Vector2(2881, 1489)
+
+[node name="Water Source11" parent="." instance=ExtResource("28_1lmdh")]
+position = Vector2(2818, 1558)
+
+[node name="Water Source12" parent="." instance=ExtResource("28_1lmdh")]
+position = Vector2(2706, 1553)
+
+[node name="Water Source13" parent="." instance=ExtResource("28_1lmdh")]
+position = Vector2(2610, 1558)
+
+[node name="Water Source14" parent="." instance=ExtResource("28_1lmdh")]
+position = Vector2(2387, 1559)
+
+[node name="Water Source15" parent="." instance=ExtResource("28_1lmdh")]
+position = Vector2(2496, 1560)
