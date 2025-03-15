@@ -1,6 +1,6 @@
-[gd_scene load_steps=23 format=3 uid="uid://cmisf2swqak7u"]
+[gd_scene load_steps=35 format=3 uid="uid://cmisf2swqak7u"]
 
-[ext_resource type="Script" path="res://scripts/dialouge_box.gd" id="1_p57ef"]
+[ext_resource type="Script" uid="uid://bnqvhus63h3i0" path="res://scripts/dialouge_box.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://dfw2o7eoxxn6g" path="res://tile_map.tscn" id="1_txyxy"]
 [ext_resource type="PackedScene" uid="uid://d2jxw073qk3kf" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://dej48tc2kyvnq" path="res://scripts/Water_bar.gd" id="2_u5sy4"]
@@ -131,10 +131,10 @@ value = 50.0
 script = ExtResource("2_u5sy4")
 
 [node name="SoilHealth" type="ProgressBar" parent="CanvasLayer"]
-offset_left = 1555.0
-offset_top = 197.0
-offset_right = 1891.0
-offset_bottom = 243.0
+offset_left = 796.0
+offset_top = 193.0
+offset_right = 1132.0
+offset_bottom = 239.0
 theme_override_styles/background = SubResource("StyleBoxFlat_u5sy4")
 theme_override_styles/fill = SubResource("StyleBoxFlat_vtaks")
 step = 1.0
@@ -142,10 +142,10 @@ value = 50.0
 script = ExtResource("3_vtaks")
 
 [node name="PlantHealth" type="ProgressBar" parent="CanvasLayer"]
-offset_left = 1556.0
-offset_top = 136.0
-offset_right = 1890.0
-offset_bottom = 182.0
+offset_left = 796.0
+offset_top = 132.0
+offset_right = 1130.0
+offset_bottom = 178.0
 theme_override_styles/background = SubResource("StyleBoxFlat_kvpfn")
 theme_override_styles/fill = SubResource("StyleBoxFlat_dinhu")
 step = 1.0
@@ -153,10 +153,10 @@ value = 50.0
 script = ExtResource("4_kvpfn")
 
 [node name="LivestockHealth" type="ProgressBar" parent="CanvasLayer"]
-offset_left = 1555.0
-offset_top = 77.0
-offset_right = 1888.0
-offset_bottom = 122.0
+offset_left = 799.0
+offset_top = 75.0
+offset_right = 1132.0
+offset_bottom = 120.0
 theme_override_styles/background = SubResource("StyleBoxFlat_kvuet")
 theme_override_styles/fill = SubResource("StyleBoxFlat_trtic")
 step = 1.0
@@ -164,10 +164,10 @@ value = 50.0
 script = ExtResource("5_dinhu")
 
 [node name="WaterLabel" type="LineEdit" parent="CanvasLayer"]
-offset_left = 1376.0
-offset_top = 20.0
-offset_right = 1552.0
-offset_bottom = 56.0
+offset_left = 609.0
+offset_top = 24.0
+offset_right = 785.0
+offset_bottom = 60.0
 theme_override_font_sizes/font_size = 20
 text = "Water Inventory:"
 
@@ -211,6 +211,7 @@ placeholder_text = "Soil health:"
 position = Vector2(1350, 781)
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
+zoom = Vector2(0.7, 0.7)
 
 [node name="Tree" parent="." instance=ExtResource("2_yqjtg")]
 position = Vector2(238, 330)
