@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://cmisf2swqak7u"]
+[gd_scene load_steps=37 format=3 uid="uid://cmisf2swqak7u"]
 
 [ext_resource type="Script" uid="uid://bnqvhus63h3i0" path="res://scripts/dialouge_box.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://dfw2o7eoxxn6g" path="res://tile_map.tscn" id="1_txyxy"]
@@ -71,6 +71,13 @@ corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
+
+[sub_resource type="GDScript" id="GDScript_suyxu"]
+script/source = "extends LineEdit
+
+func _ready():
+	add_theme_color_override(\"font_color\", Color(1, 1, 1))
+"
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
@@ -160,6 +167,7 @@ offset_bottom = 67.0
 grow_horizontal = 0
 theme_override_font_sizes/font_size = 20
 text = "Water Inventory:"
+script = SubResource("GDScript_suyxu")
 
 [node name="Livesotck Label" type="LineEdit" parent="CanvasLayer"]
 anchors_preset = 1
@@ -171,7 +179,7 @@ offset_right = -375.0
 offset_bottom = 114.0
 grow_horizontal = 0
 theme_override_font_sizes/font_size = 20
-placeholder_text = "Biodiversity:"
+text = "Biodiversity:"
 
 [node name="LineEdit2" type="LineEdit" parent="CanvasLayer"]
 anchors_preset = 1
@@ -183,7 +191,7 @@ offset_right = -375.0
 offset_bottom = 163.0
 grow_horizontal = 0
 theme_override_font_sizes/font_size = 20
-placeholder_text = "Soil health:"
+text = "Soil health:"
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 offset_right = 40.0
