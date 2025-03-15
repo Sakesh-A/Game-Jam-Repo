@@ -296,17 +296,11 @@ position = Vector2(735, 1631)
 [node name="Tree4" parent="." instance=ExtResource("2_yqjtg")]
 position = Vector2(111, 1390)
 
-[node name="Tree5" parent="." instance=ExtResource("2_yqjtg")]
-position = Vector2(2372, 753)
-
 [node name="Tree6" parent="." instance=ExtResource("2_yqjtg")]
 position = Vector2(992, 1192)
 
 [node name="Tree7" parent="." instance=ExtResource("2_yqjtg")]
 position = Vector2(1590, 1858)
-
-[node name="Tree8" parent="." instance=ExtResource("2_yqjtg")]
-position = Vector2(2681, 920)
 
 [node name="Tree9" parent="." instance=ExtResource("2_yqjtg")]
 position = Vector2(2010, 2008)
@@ -321,7 +315,7 @@ position = Vector2(1598, 982)
 position = Vector2(1133, 1391)
 
 [node name="Light Pole 3" parent="." instance=ExtResource("13_wm60a")]
-position = Vector2(2539, 591)
+position = Vector2(1853, 1511)
 
 [node name="Light Pole 4" parent="." instance=ExtResource("13_wm60a")]
 position = Vector2(447, 501)
@@ -330,7 +324,7 @@ position = Vector2(447, 501)
 position = Vector2(1852, 980)
 
 [node name="Light Pole 6" parent="." instance=ExtResource("15_psqdk")]
-position = Vector2(2640, 1028)
+position = Vector2(2097, 1218)
 
 [node name="Light Pole 7" parent="." instance=ExtResource("15_psqdk")]
 position = Vector2(58, 586)
@@ -345,7 +339,7 @@ position = Vector2(2091, 396)
 position = Vector2(1259, 909)
 
 [node name="Chair Bench2" parent="." instance=ExtResource("16_s3mr8")]
-position = Vector2(2747, 506)
+position = Vector2(2273, 1707)
 
 [node name="House4" parent="." instance=ExtResource("17_us0lq")]
 position = Vector2(1442, 470)
@@ -564,7 +558,7 @@ position = Vector2(1225, 1391)
 position = Vector2(1389, 905)
 
 [node name="Tree11" parent="." instance=ExtResource("2_yqjtg")]
-position = Vector2(3022, 1157)
+position = Vector2(811, 2068)
 
 [node name="Chicken2" parent="." instance=ExtResource("7_qnb83")]
 position = Vector2(335, 1629)
