@@ -1,28 +1,33 @@
-[gd_scene load_steps=7 format=3 uid="uid://cmisf2swqak7u"]
+[gd_scene load_steps=12 format=3 uid="uid://cmisf2swqak7u"]
 
-[ext_resource type="Script" uid="uid://bnqvhus63h3i0" path="res://scripts/dialouge_box.gd" id="1_p57ef"]
+[ext_resource type="Script" path="res://scripts/dialouge_box.gd" id="1_p57ef"]
+[ext_resource type="PackedScene" uid="uid://dfw2o7eoxxn6g" path="res://tile_map.tscn" id="1_txyxy"]
 [ext_resource type="PackedScene" uid="uid://d2jxw073qk3kf" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://dmg1sfr2q6g1m" path="res://scenes/tree.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://bvpvgirp14b33" path="res://scenes/farmer.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://c8jr41286oi7o" path="res://scenes/old_woman.tscn" id="4_iywne"]
 [ext_resource type="PackedScene" uid="uid://ug02kkc308df" path="res://scenes/villager_man.tscn" id="5_p57ef"]
+[ext_resource type="PackedScene" uid="uid://c47uv3ufjn4ce" path="res://scenes/house1.tscn" id="8_ka531"]
+[ext_resource type="PackedScene" uid="uid://cimwvqb08sgtf" path="res://scenes/house2.tscn" id="9_xfgfn"]
+[ext_resource type="PackedScene" uid="uid://ctfuv5q6tlrwc" path="res://scenes/house3.tscn" id="10_3bf6p"]
+[ext_resource type="PackedScene" uid="uid://w1nsqy7inq2w" path="res://scenes/animal_pen.tscn" id="11_myqph"]
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
 
+[node name="TileMap" parent="." instance=ExtResource("1_txyxy")]
+z_index = -1
+position = Vector2(1521, 974)
+scale = Vector2(5, 5)
+
 [node name="Terrain" type="CanvasLayer" parent="."]
 layer = -1
-
-[node name="ColorRect" type="ColorRect" parent="Terrain"]
-offset_right = 85.0
-offset_bottom = 91.0
-scale = Vector2(28.7925, 16.2013)
-color = Color(0.498627, 0.898115, 0.439274, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 5
 
 [node name="DialogueBox" type="ColorRect" parent="CanvasLayer"]
+visible = false
 offset_left = 702.0
 offset_top = 442.0
 offset_right = 1502.0
@@ -41,6 +46,8 @@ text = "b"
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 position = Vector2(1350, 781)
 
+[node name="Camera2D2" type="Camera2D" parent="Player"]
+
 [node name="Tree" parent="." instance=ExtResource("2_yqjtg")]
 position = Vector2(377, 429)
 
@@ -58,3 +65,16 @@ position = Vector2(1463, 754)
 
 [node name="Villager Man" parent="." instance=ExtResource("5_p57ef")]
 position = Vector2(675, 211)
+
+[node name="House" parent="." instance=ExtResource("8_ka531")]
+y_sort_enabled = true
+position = Vector2(2101, 930)
+
+[node name="House2" parent="." instance=ExtResource("9_xfgfn")]
+position = Vector2(1451, 1475)
+
+[node name="House3" parent="." instance=ExtResource("10_3bf6p")]
+position = Vector2(796, 808)
+
+[node name="Top Fence" parent="." instance=ExtResource("11_myqph")]
+position = Vector2(447, 1662)
