@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://cmisf2swqak7u"]
+[gd_scene load_steps=40 format=3 uid="uid://cmisf2swqak7u"]
 
 [ext_resource type="Script" path="res://scripts/dialouge_box.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://dfw2o7eoxxn6g" path="res://tile_map.tscn" id="1_txyxy"]
@@ -31,6 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://b8hpmq4l6hy01" path="res://scenes/irrigation_channel.tscn" id="30_m0jmy"]
 [ext_resource type="PackedScene" path="res://scenes/onion.tscn" id="30_sgl2t"]
 [ext_resource type="PackedScene" uid="uid://c6iqwo6p5u5l0" path="res://scenes/waterfall.tscn" id="31_bm1bo"]
+[ext_resource type="PackedScene" uid="uid://b4sbqesar274i" path="res://scenes/Well.tscn" id="32_ru2y7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gee14"]
 bg_color = Color(0, 0, 0.133333, 1)
@@ -780,3 +781,13 @@ position = Vector2(2710, 2307)
 [node name="Waterfall" parent="." instance=ExtResource("31_bm1bo")]
 position = Vector2(2707, 2475)
 rotation = 0.0168293
+
+[node name="Irrigation5" parent="." instance=ExtResource("30_m0jmy")]
+position = Vector2(2815, 1053)
+
+[node name="Irrigation6" parent="." instance=ExtResource("30_m0jmy")]
+position = Vector2(2812, 899)
+
+[node name="well" parent="." instance=ExtResource("32_ru2y7")]
+z_index = 1
+position = Vector2(2815, 776)

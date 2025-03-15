@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4sbqesar274i"]
+
+[ext_resource type="Texture2D" uid="uid://cer6o2onihbwu" path="res://assets/sprites/objects.png" id="1_gjasb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_avsvi"]
+radius = 61.0
+height = 122.0
+
+[node name="well" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(7, -49)
+rotation = -0.0024358
+scale = Vector2(5.9044, 5.27596)
+texture = ExtResource("1_gjasb")
+region_enabled = true
+region_rect = Rect2(213.185, 223.859, 39.7757, 47.2831)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, -3)
+shape = SubResource("CapsuleShape2D_avsvi")
