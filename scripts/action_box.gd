@@ -4,23 +4,23 @@ extends ColorRect
 @onready var action_label = "" # Get the Label inside the DialogueBox
 @onready var action_path = ""  # Store path as a string, not a node.
 
-var can_close = false # Prevents instant closing
+var can_close = false
 
 func _ready():
-	get_viewport().size_changed.connect(center_action_box) # Update when window resizes
-	visible = false  # Start hidden
+	get_viewport().size_changed.connect(center_action_box) 
+	visible = false 
 
 func _process(delta):
 	center_action_box()
 	if visible and can_close and Input.is_action_just_pressed("interact"):
 		close_action()
 	if visible and Input.is_action_just_pressed("action"):
-		print("Attempting to call action on:", action_path)  # Debugging output
-		var action_node = get_node_or_null(action_path)  # Convert path to node
+		print("Attempting to call action on:", action_path) 
+		var action_node = get_node_or_null(action_path) 
 		if action_node:
 			action_node._action()
 		else:
-			print("Error: Node not found at path: " + action_path)  # Debugging output
+			print("Error: Node not found at path: " + action_path) 
 		close_action()
 	if visible and can_close and Input.is_action_just_pressed("close_dialogue"):
 		visible = false
