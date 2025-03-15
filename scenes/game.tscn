@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://cmisf2swqak7u"]
+[gd_scene load_steps=36 format=3 uid="uid://cmisf2swqak7u"]
 
 [ext_resource type="Script" uid="uid://bnqvhus63h3i0" path="res://scripts/dialouge_box.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://dfw2o7eoxxn6g" path="res://tile_map.tscn" id="1_txyxy"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://d2qewnu44uixs" path="res://scripts/plant_health.gd" id="4_kvpfn"]
 [ext_resource type="Script" uid="uid://dpx7qwcbd5f14" path="res://scripts/livestock_health.gd" id="5_dinhu"]
 [ext_resource type="PackedScene" uid="uid://ug02kkc308df" path="res://scenes/villager_man.tscn" id="5_p57ef"]
+[ext_resource type="PackedScene" uid="uid://byxebdomsn5hh" path="res://scenes/chicken.tscn" id="7_qnb83"]
 [ext_resource type="PackedScene" uid="uid://c47uv3ufjn4ce" path="res://scenes/house1.tscn" id="8_ka531"]
 [ext_resource type="PackedScene" uid="uid://cimwvqb08sgtf" path="res://scenes/house2.tscn" id="9_xfgfn"]
 [ext_resource type="PackedScene" uid="uid://ctfuv5q6tlrwc" path="res://scenes/house3.tscn" id="10_3bf6p"]
@@ -231,6 +232,9 @@ zoom = Vector2(0.7, 0.7)
 
 [node name="Tree" parent="." instance=ExtResource("2_yqjtg")]
 position = Vector2(238, 330)
+
+[node name="Chicken" parent="." instance=ExtResource("7_qnb83")]
+position = Vector2(197, 1616)
 
 [node name="Tree2" parent="." instance=ExtResource("2_yqjtg")]
 position = Vector2(1936, 530)
@@ -556,3 +560,30 @@ position = Vector2(1389, 905)
 
 [node name="Tree11" parent="." instance=ExtResource("2_yqjtg")]
 position = Vector2(3022, 1157)
+
+[node name="Chicken2" parent="." instance=ExtResource("7_qnb83")]
+position = Vector2(296, 1613)
+
+[node name="Chicken3" parent="." instance=ExtResource("7_qnb83")]
+position = Vector2(199, 1699)
+
+[node name="Chicken4" parent="." instance=ExtResource("7_qnb83")]
+position = Vector2(407, 1617)
+
+[node name="Chicken5" parent="." instance=ExtResource("7_qnb83")]
+position = Vector2(517, 1629)
+
+[node name="Chicken6" parent="." instance=ExtResource("7_qnb83")]
+position = Vector2(197, 1821)
+
+[node name="Chicken7" parent="." instance=ExtResource("7_qnb83")]
+position = Vector2(436, 1718)
+
+[node name="Chicken8" parent="." instance=ExtResource("7_qnb83")]
+position = Vector2(561, 1833)
+
+[node name="Chicken9" parent="." instance=ExtResource("7_qnb83")]
+position = Vector2(318, 1859)
+
+[node name="Chicken10" parent="." instance=ExtResource("7_qnb83")]
+position = Vector2(620, 1726)
