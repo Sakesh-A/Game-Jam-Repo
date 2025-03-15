@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8hpmq4l6hy01"]
+
+[ext_resource type="Texture2D" uid="uid://c50dmokvm2lxy" path="res://assets/sprites/irrigation channel.png" id="1_io1go"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_avsvi"]
+radius = 60.0
+height = 178.0
+
+[node name="Irrigation" type="StaticBody2D"]
+
+[node name="channel" type="Sprite2D" parent="."]
+position = Vector2(-1, -5)
+rotation = -0.0024358
+scale = Vector2(0.741138, 0.827001)
+texture = ExtResource("1_io1go")
+region_enabled = true
+region_rect = Rect2(-1.31989, -0.486809, 252.413, 268.713)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -9)
+shape = SubResource("CapsuleShape2D_avsvi")
