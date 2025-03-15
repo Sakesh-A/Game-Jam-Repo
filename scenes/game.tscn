@@ -1,32 +1,32 @@
 [gd_scene load_steps=36 format=3 uid="uid://cmisf2swqak7u"]
 
-[ext_resource type="Script" uid="uid://bnqvhus63h3i0" path="res://scripts/dialouge_box.gd" id="1_p57ef"]
+[ext_resource type="Script" path="res://scripts/dialouge_box.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://dfw2o7eoxxn6g" path="res://tile_map.tscn" id="1_txyxy"]
 [ext_resource type="PackedScene" uid="uid://d2jxw073qk3kf" path="res://scenes/player.tscn" id="1_uwrxv"]
-[ext_resource type="Script" uid="uid://dej48tc2kyvnq" path="res://scripts/Water_bar.gd" id="2_u5sy4"]
+[ext_resource type="Script" path="res://scripts/Water_bar.gd" id="2_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://dmg1sfr2q6g1m" path="res://scenes/tree.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://bvpvgirp14b33" path="res://scenes/farmer.tscn" id="3_lnu2h"]
-[ext_resource type="Script" uid="uid://0xojn8gtfu2i" path="res://scripts/soil_health.gd" id="3_vtaks"]
+[ext_resource type="Script" path="res://scripts/soil_health.gd" id="3_vtaks"]
 [ext_resource type="PackedScene" uid="uid://c8jr41286oi7o" path="res://scenes/old_woman.tscn" id="4_iywne"]
-[ext_resource type="Script" uid="uid://d2qewnu44uixs" path="res://scripts/plant_health.gd" id="4_kvpfn"]
-[ext_resource type="Script" uid="uid://dpx7qwcbd5f14" path="res://scripts/livestock_health.gd" id="5_dinhu"]
+[ext_resource type="Script" path="res://scripts/plant_health.gd" id="4_kvpfn"]
+[ext_resource type="Script" path="res://scripts/livestock_health.gd" id="5_dinhu"]
 [ext_resource type="PackedScene" uid="uid://ug02kkc308df" path="res://scenes/villager_man.tscn" id="5_p57ef"]
 [ext_resource type="PackedScene" uid="uid://byxebdomsn5hh" path="res://scenes/chicken.tscn" id="7_qnb83"]
-[ext_resource type="PackedScene" uid="uid://c47uv3ufjn4ce" path="res://scenes/house1.tscn" id="8_ka531"]
-[ext_resource type="PackedScene" uid="uid://cimwvqb08sgtf" path="res://scenes/house2.tscn" id="9_xfgfn"]
-[ext_resource type="PackedScene" uid="uid://ctfuv5q6tlrwc" path="res://scenes/house3.tscn" id="10_3bf6p"]
-[ext_resource type="PackedScene" uid="uid://w1nsqy7inq2w" path="res://scenes/animal_pen_top.tscn" id="11_myqph"]
-[ext_resource type="PackedScene" uid="uid://ywy1py7dbanl" path="res://scenes/animal_pen_side.tscn" id="12_0xud7"]
-[ext_resource type="PackedScene" uid="uid://c58pm5fl5f3sm" path="res://scenes/light_pole.tscn" id="13_wm60a"]
-[ext_resource type="PackedScene" uid="uid://c7fsq6pbujp8f" path="res://scenes/flower_bed.tscn" id="14_o7md6"]
-[ext_resource type="PackedScene" uid="uid://bj44unxipropt" path="res://scenes/flower1.tscn" id="15_psqdk"]
-[ext_resource type="PackedScene" uid="uid://vw5mmk17pjae" path="res://scenes/chair_bench.tscn" id="16_s3mr8"]
-[ext_resource type="PackedScene" uid="uid://bo0aqquqqtd8u" path="res://scenes/house4.tscn" id="17_us0lq"]
-[ext_resource type="PackedScene" uid="uid://0tfkyggbo3aw" path="res://scenes/bushes_top.tscn" id="18_86lrx"]
-[ext_resource type="PackedScene" uid="uid://bfh8rkgo6nv7u" path="res://scenes/bushes_side.tscn" id="19_56k38"]
-[ext_resource type="PackedScene" uid="uid://dhprhad4nsj0i" path="res://scenes/logstack.tscn" id="20_e6ajy"]
-[ext_resource type="PackedScene" uid="uid://eit51i4l4ru2" path="res://scenes/axe_logs.tscn" id="21_tcmcr"]
-[ext_resource type="PackedScene" uid="uid://bkq2w2w1vhr4d" path="res://scenes/flower2.tscn" id="22_jrdmb"]
+[ext_resource type="PackedScene" path="res://scenes/house1.tscn" id="8_ka531"]
+[ext_resource type="PackedScene" path="res://scenes/house2.tscn" id="9_xfgfn"]
+[ext_resource type="PackedScene" path="res://scenes/house3.tscn" id="10_3bf6p"]
+[ext_resource type="PackedScene" path="res://scenes/animal_pen_top.tscn" id="11_myqph"]
+[ext_resource type="PackedScene" path="res://scenes/animal_pen_side.tscn" id="12_0xud7"]
+[ext_resource type="PackedScene" path="res://scenes/light_pole.tscn" id="13_wm60a"]
+[ext_resource type="PackedScene" path="res://scenes/flower_bed.tscn" id="14_o7md6"]
+[ext_resource type="PackedScene" path="res://scenes/flower1.tscn" id="15_psqdk"]
+[ext_resource type="PackedScene" path="res://scenes/chair_bench.tscn" id="16_s3mr8"]
+[ext_resource type="PackedScene" path="res://scenes/house4.tscn" id="17_us0lq"]
+[ext_resource type="PackedScene" path="res://scenes/bushes_top.tscn" id="18_86lrx"]
+[ext_resource type="PackedScene" path="res://scenes/bushes_side.tscn" id="19_56k38"]
+[ext_resource type="PackedScene" path="res://scenes/logstack.tscn" id="20_e6ajy"]
+[ext_resource type="PackedScene" path="res://scenes/axe_logs.tscn" id="21_tcmcr"]
+[ext_resource type="PackedScene" path="res://scenes/flower2.tscn" id="22_jrdmb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gee14"]
 bg_color = Color(0, 0, 0.133333, 1)
@@ -234,7 +234,7 @@ zoom = Vector2(0.7, 0.7)
 position = Vector2(238, 330)
 
 [node name="Chicken" parent="." instance=ExtResource("7_qnb83")]
-position = Vector2(197, 1616)
+position = Vector2(219, 1683)
 
 [node name="Tree2" parent="." instance=ExtResource("2_yqjtg")]
 position = Vector2(1936, 530)
@@ -562,28 +562,28 @@ position = Vector2(1389, 905)
 position = Vector2(3022, 1157)
 
 [node name="Chicken2" parent="." instance=ExtResource("7_qnb83")]
-position = Vector2(296, 1613)
+position = Vector2(335, 1629)
 
 [node name="Chicken3" parent="." instance=ExtResource("7_qnb83")]
-position = Vector2(199, 1699)
+position = Vector2(329, 1830)
 
 [node name="Chicken4" parent="." instance=ExtResource("7_qnb83")]
-position = Vector2(407, 1617)
+position = Vector2(396, 1676)
 
 [node name="Chicken5" parent="." instance=ExtResource("7_qnb83")]
-position = Vector2(517, 1629)
+position = Vector2(547, 1634)
 
 [node name="Chicken6" parent="." instance=ExtResource("7_qnb83")]
-position = Vector2(197, 1821)
+position = Vector2(218, 1837)
 
 [node name="Chicken7" parent="." instance=ExtResource("7_qnb83")]
-position = Vector2(436, 1718)
+position = Vector2(486, 1750)
 
 [node name="Chicken8" parent="." instance=ExtResource("7_qnb83")]
-position = Vector2(561, 1833)
+position = Vector2(546, 1878)
 
 [node name="Chicken9" parent="." instance=ExtResource("7_qnb83")]
-position = Vector2(318, 1859)
+position = Vector2(366, 1880)
 
 [node name="Chicken10" parent="." instance=ExtResource("7_qnb83")]
-position = Vector2(620, 1726)
+position = Vector2(612, 1760)
