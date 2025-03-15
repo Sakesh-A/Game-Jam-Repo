@@ -1,15 +1,24 @@
 extends Node2D
 
 @export var interaction_distance: float = 100.0 # Adjust based on your game
-@export var npc_dialogue: String = "Hello, I am a shovel! I cost 3 AP!" # Unique dialogue per NPC
+@export var cost: int = 3
+@export var action_description: String = "Hello, I am a shovel! I cost " # Unique dialogue per NPC
 
 @onready var player = get_node("/root/Game/Player")
+@onready var action_box = get_node("/root/Game/CanvasLayer/ActionBox") # Get the dialogue box node
 @onready var dialogue_box = get_node("/root/Game/CanvasLayer/DialogueBox") # Get the dialogue box node
+
+var interacted: bool = false  # Track if the object has already been used
 
 func _ready():
 	$InteractionIcon.visible = false # Hide the indicator initially
 
-func _physics_process(delta: float) -> void:
+func _process(delta: float) -> void:
+	# If already interacted, disable further interaction
+	if interacted:
+		$InteractionIcon.visible = false
+		return  
+
 	var direction = global_position.direction_to(player.global_position)
 
 	# Check if the player is within interaction range
@@ -19,6 +28,25 @@ func _physics_process(delta: float) -> void:
 		
 		# Check for "interact" input
 		if Input.is_action_just_pressed("interact"):
-			dialogue_box.open_dialogue(npc_dialogue) # Pass unique NPC text
+			var action_text = action_description + str(cost) + "\n You have this many AP points: " + str(GameManager.action_points)
+			if GameManager.action_points < cost:
+				action_text += "\n Not enough points to buy"
+				dialogue_box.open_dialogue(action_text)
+			else:
+				action_text += "\n Press E to buy"
+				action_box.open_action(action_text, get_path()) # Pass the _action function as a callback
 	else:
 		$InteractionIcon.visible = false # Hide indicator
+		action_box.visible = false
+
+func _action():
+	# Ensure action is performed only once
+	if interacted:
+		return  
+
+	GameManager.action_points -= cost
+	GameManager.soil_quality += 3
+	GameManager.hasWater = true
+
+	# Mark as interacted and disable future interactions
+	interacted = true

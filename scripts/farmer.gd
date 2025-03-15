@@ -10,7 +10,7 @@ We need to disable player movement when this window appears and offer two button
 func _ready():
 	$InteractionIcon.visible = false # Hide the indicator initially
 
-func _physics_process(delta: float) -> void:
+func _process(delta: float) -> void:
 	$AnimatedSprite2D.play("idle")
 	var direction = global_position.direction_to(player.global_position)
 
@@ -26,6 +26,6 @@ func _physics_process(delta: float) -> void:
 		
 		# Check for "interact" input
 		if Input.is_action_just_pressed("interact"):
-			dialogue_box.open_dialogue(npc_dialogue) # Pass unique NPC text
+			dialogue_box.open_dialogue(npc_dialogue, get_path()) # Pass unique NPC text
 	else:
 		$InteractionIcon.visible = false # Hide indicator

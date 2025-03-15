@@ -9,6 +9,9 @@ var livestock: int = 0
 var weather: int = 0
 var water: int = 0
 
+# STATES
+var hasWater: bool = false
+
 var day: int = 1
 var action_points: int = 5
 

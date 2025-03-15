@@ -1,7 +1,8 @@
 extends ColorRect
 
 @onready var player = get_node("/root/Game/Player") # Get the player automatically
-@onready var dialogue_label = $DialogueText # Get the Label inside the DialogueBox
+@onready var dialogue = "" # Get the Label inside the DialogueBox
+@onready var dialogue_path = ""  # Store path as a string, not a node.
 
 var can_close = false # Prevents instant closing
 
@@ -11,27 +12,22 @@ func _ready():
 
 func _process(delta):
 	center_dialogue_box()
-	if visible and can_close and Input.is_action_just_pressed("interact"): 
+	if Input.is_action_just_pressed("close_dialogue"):
 		close_dialogue()
 
 func center_dialogue_box():
-	# Get the viewport size
 	var screen_size = get_viewport_rect().size
-	# Center the dialogue box
 	position = (screen_size / 2) - (size / 2)
 
-func open_dialogue(dialogue_text: String):
-	dialogue_label.text = dialogue_text # Set unique NPC dialogue
+func open_dialogue(dialogue_text: String, path: String):
+	$DialogueText.text = dialogue_text
 	visible = true
-	can_close = false # Prevent immediate closing
-	await get_tree().create_timer(0.2).timeout # Small delay before allowing close
-	can_close = true # Now, the player can close the dialogue
-
-	if player:
-		player.set_process(false) # Disable player movement
+	can_close = false
+	await get_tree().create_timer(0.1).timeout
+	can_close = true
 
 func close_dialogue():
 	visible = false
-	can_close = false # Reset for the next interaction
+	can_close = false
 	if player:
 		player.set_process(true)  # Re-enable player movement
