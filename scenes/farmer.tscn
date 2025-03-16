@@ -1,39 +1,39 @@
 [gd_scene load_steps=13 format=3 uid="uid://bvpvgirp14b33"]
 
 [ext_resource type="Script" uid="uid://c0bdklcyvmt2d" path="res://scripts/farmer.gd" id="1_2qlof"]
-[ext_resource type="Texture2D" uid="uid://c4tmlux3eg6js" path="res://assets/sprites/farmer.png" id="1_vltvv"]
+[ext_resource type="Texture2D" uid="uid://bgmjvudf0h6mw" path="res://assets/sprites/Headman-Sheet.png" id="2_hkter"]
 [ext_resource type="Texture2D" uid="uid://dfd8hjwst2ayp" path="res://assets/sprites/icons.png" id="3_hkter"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2qlof"]
-atlas = ExtResource("1_vltvv")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hkter"]
-atlas = ExtResource("1_vltvv")
-region = Rect2(32, 0, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_7541a"]
-atlas = ExtResource("1_vltvv")
-region = Rect2(64, 0, 32, 32)
+atlas = ExtResource("2_hkter")
+region = Rect2(0, 0, 54, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rov4t"]
-atlas = ExtResource("1_vltvv")
-region = Rect2(96, 0, 32, 32)
+atlas = ExtResource("2_hkter")
+region = Rect2(54, 0, 54, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_go23t"]
+atlas = ExtResource("2_hkter")
+region = Rect2(108, 0, 54, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_loie6"]
+atlas = ExtResource("2_hkter")
+region = Rect2(162, 0, 54, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_go23t"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2qlof")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hkter")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_7541a")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_rov4t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_go23t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_loie6")
 }],
 "loop": true,
 "name": &"idle",
@@ -69,6 +69,7 @@ animations = [{
 script = ExtResource("1_2qlof")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(14, 0)
 scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_go23t")
 animation = &"idle"
@@ -78,6 +79,6 @@ offset = Vector2(0, -12.5)
 shape = SubResource("CircleShape2D_hkter")
 
 [node name="InteractionIcon" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -98)
+position = Vector2(0, -157)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_7541a")

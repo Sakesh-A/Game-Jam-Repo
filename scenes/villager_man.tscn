@@ -1,31 +1,28 @@
 [gd_scene load_steps=13 format=3 uid="uid://ug02kkc308df"]
 
 [ext_resource type="Script" uid="uid://cvkregrpdnvcs" path="res://scripts/villager_man.gd" id="1_vn0xy"]
-[ext_resource type="Texture2D" uid="uid://bsshwfrfj2lac" path="res://assets/sprites/villager_man.png" id="2_vn0xy"]
+[ext_resource type="Texture2D" uid="uid://b2wphkr8id4ke" path="res://assets/sprites/Villager002-Sheet.png" id="2_ss1xc"]
 [ext_resource type="Texture2D" uid="uid://dfd8hjwst2ayp" path="res://assets/sprites/icons.png" id="3_ss1xc"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ss1xc"]
-atlas = ExtResource("2_vn0xy")
-region = Rect2(0, 0, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_lk3mw"]
-atlas = ExtResource("2_vn0xy")
-region = Rect2(32, 0, 32, 32)
+atlas = ExtResource("2_ss1xc")
+region = Rect2(0, 0, 54, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d3e2r"]
-atlas = ExtResource("2_vn0xy")
-region = Rect2(64, 0, 32, 32)
+atlas = ExtResource("2_ss1xc")
+region = Rect2(54, 0, 54, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pjmh2"]
-atlas = ExtResource("2_vn0xy")
-region = Rect2(96, 0, 32, 32)
+atlas = ExtResource("2_ss1xc")
+region = Rect2(108, 0, 54, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lnjn7"]
+atlas = ExtResource("2_ss1xc")
+region = Rect2(162, 0, 54, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_go23t"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ss1xc")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_lk3mw")
 }, {
@@ -34,6 +31,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pjmh2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lnjn7")
 }],
 "loop": true,
 "name": &"idle",
@@ -69,15 +69,17 @@ animations = [{
 script = ExtResource("1_vn0xy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(8, 0)
 scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_go23t")
 animation = &"idle"
 offset = Vector2(0, -12.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
 shape = SubResource("CircleShape2D_hkter")
 
 [node name="InteractionIcon" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -100)
+position = Vector2(0, -166)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_lk3mw")

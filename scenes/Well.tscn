@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://cer6o2onihbwu" path="res://assets/sprites/objects.png" id="1_gjasb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_avsvi"]
-radius = 61.0
-height = 122.0
+radius = 65.0
+height = 130.0
 
 [node name="well" type="StaticBody2D"]
 
@@ -17,5 +17,5 @@ region_enabled = true
 region_rect = Rect2(213.185, 223.859, 39.7757, 47.2831)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3, -3)
+position = Vector2(0, 7)
 shape = SubResource("CapsuleShape2D_avsvi")

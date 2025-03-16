@@ -276,13 +276,13 @@ position = Vector2(1936, 530)
 position = Vector2(982, 299)
 
 [node name="Farmer" parent="." instance=ExtResource("3_lnu2h")]
-position = Vector2(2603, 683)
+position = Vector2(826, 1561)
 
 [node name="Old Woman" parent="." instance=ExtResource("4_iywne")]
-position = Vector2(1325, 541)
+position = Vector2(2663, 643)
 
 [node name="Villager Man" parent="." instance=ExtResource("5_p57ef")]
-position = Vector2(814, 1556)
+position = Vector2(2390, 1022)
 
 [node name="House" parent="." instance=ExtResource("8_ka531")]
 y_sort_enabled = true
@@ -852,7 +852,7 @@ position = Vector2(2815, 776)
 position = Vector2(673, 843)
 
 [node name="finalvillager" parent="." instance=ExtResource("34_js0lu")]
-position = Vector2(1249, 1466)
+position = Vector2(1229, 1501)
 
 [node name="Red_hair_girl" parent="." instance=ExtResource("35_gxtfn")]
-position = Vector2(2379, 912)
+position = Vector2(1349, 476)
