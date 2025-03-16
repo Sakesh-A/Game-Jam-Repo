@@ -27,16 +27,14 @@ func generate_end_text() -> String:
 	var text = "" 
 	text += "Biodiversity level: " + str(GameManager.biodiversity) 
 	text += "\nWater level: " + str(GameManager.water) 
-	text += "\nSoil quality: " + str(GameManager.soil_quality) 
-	text += "\nThe weather forcast is " + GameManager.weather_conditions[GameManager.prev_weather] + " for today" 
-	text += "\nThe weather is predicted to be " + GameManager.weather_conditions[GameManager.weather] + "tomorrow" 
+	text += "\nSoil quality: " + str(GameManager.soil_quality)  
 	return text 
 
 func _next_day_started():
 	open_dialogue(generate_day_text()) 
 
 func _end_game(): 
-	open_dialogue(generate_end_text()) 
+	open_dialogue(generate_end_text())
 
 func _process(_delta): 
 	center_dialogue_box() 
@@ -54,8 +52,6 @@ func open_dialogue(day_text: String):
 
 func close_dialogue(): 
 	visible = false 
-	if player: 
-		player.set_process(true)
 	button.visible = true
-
- 
+	if GameManager.game_ended:
+		get_tree().quit()

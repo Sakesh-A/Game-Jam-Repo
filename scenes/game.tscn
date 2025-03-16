@@ -45,8 +45,8 @@
 [ext_resource type="PackedScene" uid="uid://kf18h3iheutw" path="res://scenes/bucket.tscn" id="43_05nbr"]
 [ext_resource type="PackedScene" uid="uid://cb3x3rpdx4fhi" path="res://scenes/barrel.tscn" id="44_0sl42"]
 [ext_resource type="AudioStream" uid="uid://clgqtql3w6q2i" path="res://assets/EditedAudioForGame.mp3" id="45_oaba0"]
-[ext_resource type="PackedScene" path="res://scenes/sapling.tscn" id="46_458eo"]
-[ext_resource type="PackedScene" path="res://scenes/cat.tscn" id="47_h3rex"]
+[ext_resource type="PackedScene" uid="uid://dqe8s1hmc544" path="res://scenes/sapling.tscn" id="46_458eo"]
+[ext_resource type="PackedScene" uid="uid://olcayy5oburg" path="res://scenes/cat.tscn" id="47_h3rex"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gee14"]
 bg_color = Color(0, 0, 0.133333, 1)

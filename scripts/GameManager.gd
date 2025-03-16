@@ -11,6 +11,7 @@ var tree_planted: int = 0
 var water_maintained: int = 0 
 signal next_day 
 signal game_end 
+var game_ended
 
 var weather_conditions = { 
 	-2: "Drought", 
@@ -27,6 +28,9 @@ func _ready() -> void:
 func next_level(): 
 	if day > 5: 
 		game_end.emit() 
+		game_ended = true
+		return
+
 	day += 1 
 	next_day.emit() 
 	action_points = 5 

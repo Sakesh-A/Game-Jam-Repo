@@ -4,6 +4,7 @@ extends StaticBody2D
 
 func _ready():
 	$AnimatedSprite2D.play("default")
+	visible = true
 	randomize()
 	start_flipping()
 
@@ -14,6 +15,19 @@ func start_flipping():
 	timer.one_shot = false
 	timer.connect("timeout", _on_flip_timer_timeout)
 	add_child(timer)
+	GameManager.next_day.connect(_next_day)
+	
+func _next_day():
+	if GameManager.water < 0 or GameManager.soil_quality < 0 or GameManager.biodiversity < 0:
+		randomize() 
+		var change = randi_range(-2, 2) 
+		if change == -2:
+			visible = false
+	else:
+		randomize() 
+		var change = randi_range(-2, 2) 
+		if change >= 1:
+			visible = true
 
 func _on_flip_timer_timeout():
 	if randi() % 2 == 0:
