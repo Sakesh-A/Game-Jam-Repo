@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://cmisf2swqak7u"]
+[gd_scene load_steps=73 format=3 uid="uid://cmisf2swqak7u"]
 
 [ext_resource type="Script" uid="uid://bnqvhus63h3i0" path="res://scripts/dialogue_box.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://jo75wgd50jr" path="res://scenes/tile_map.tscn" id="1_txyxy"]
@@ -44,13 +44,14 @@
 [ext_resource type="PackedScene" uid="uid://b3dqncnewrsfs" path="res://scenes/mountain_flpped.tscn" id="42_pr1ej"]
 [ext_resource type="PackedScene" uid="uid://kf18h3iheutw" path="res://scenes/bucket.tscn" id="43_05nbr"]
 [ext_resource type="PackedScene" uid="uid://cb3x3rpdx4fhi" path="res://scenes/barrel.tscn" id="44_0sl42"]
-[ext_resource type="AudioStream" uid="uid://clgqtql3w6q2i" path="res://assets/EditedAudioForGame.mp3" id="45_oaba0"]
+[ext_resource type="AudioStream" uid="uid://clgqtql3w6q2i" path="res://assets/audio/EditedAudioForGame.mp3" id="45_oaba0"]
 [ext_resource type="PackedScene" uid="uid://dqe8s1hmc544" path="res://scenes/sapling.tscn" id="46_458eo"]
 [ext_resource type="PackedScene" uid="uid://olcayy5oburg" path="res://scenes/cat.tscn" id="47_h3rex"]
 [ext_resource type="PackedScene" uid="uid://npv826kn6d3c" path="res://scenes/seeds2.tscn" id="48_8qswn"]
 [ext_resource type="PackedScene" uid="uid://2tcff7c21p4y" path="res://scenes/sapling2.tscn" id="49_rm0al"]
 [ext_resource type="PackedScene" uid="uid://duomqgl10ysod" path="res://scenes/fountain.tscn" id="50_rm0al"]
 [ext_resource type="PackedScene" uid="uid://bqaiure28c670" path="res://scenes/bird.tscn" id="51_i4re6"]
+[ext_resource type="Script" uid="uid://dt8fbnivqjd3d" path="res://scripts/sky.gd" id="52_ms3bu"]
 [ext_resource type="Script" uid="uid://dma0s45sy3t8h" path="res://scripts/light_rain.gd" id="52_pf7vy"]
 [ext_resource type="Script" uid="uid://dtgbg27bax7e8" path="res://scripts/dry.gd" id="53_3hbvx"]
 [ext_resource type="Script" uid="uid://cc7tsmept0tg" path="res://scripts/heavy_rain.gd" id="53_o8ni1"]
@@ -336,10 +337,6 @@ offset_bottom = 163.0
 grow_horizontal = 0
 theme_override_font_sizes/font_size = 20
 text = "Soil health:"
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="CanvasLayer"]
-amount = 800000
-process_material = SubResource("ParticleProcessMaterial_0rmfi")
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 position = Vector2(1350, 781)
@@ -1043,6 +1040,11 @@ position = Vector2(299, 226)
 
 [node name="Sky" type="CanvasLayer" parent="."]
 layer = 3
+script = ExtResource("52_ms3bu")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Sky"]
+amount = 800000
+process_material = SubResource("ParticleProcessMaterial_0rmfi")
 
 [node name="LightRain" type="ColorRect" parent="Sky"]
 visible = false
