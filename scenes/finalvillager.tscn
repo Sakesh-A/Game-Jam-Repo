@@ -4,9 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://dfd8hjwst2ayp" path="res://assets/sprites/icons.png" id="2_5jv4j"]
 [ext_resource type="Texture2D" uid="uid://nfib2e13cr06" path="res://assets/sprites/Villager004-Sheet.png" id="2_yw0th"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_gw8xa"]
-radius = 21.0238
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_3ha3y"]
 atlas = ExtResource("2_5jv4j")
 region = Rect2(37, 153, 10, 16)
@@ -65,20 +62,24 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_gw8xa"]
+radius = 19.105
+
 [node name="finalvillager" type="StaticBody2D"]
 script = ExtResource("1_5jv4j")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3, 5)
-shape = SubResource("CircleShape2D_gw8xa")
-
 [node name="InteractionIcon" type="AnimatedSprite2D" parent="."]
-position = Vector2(-12, -78)
+position = Vector2(9.53674e-07, -119)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_8aapr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(11, -16)
+position = Vector2(4.99999, -43)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_yiml7")
 animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-9.00001, 16)
+scale = Vector2(1, 1)
+shape = SubResource("CircleShape2D_gw8xa")

@@ -2,9 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://cer6o2onihbwu" path="res://assets/sprites/objects.png" id="1_w77uh"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_avsvi"]
-radius = 53.0
-height = 110.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_whtkq"]
+size = Vector2(115, 81)
 
 [node name="Flower Bed" type="StaticBody2D"]
 
@@ -16,5 +15,5 @@ region_enabled = true
 region_rect = Rect2(434.743, 342.699, 26.8266, 26.4262)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3, -65)
-shape = SubResource("CapsuleShape2D_avsvi")
+position = Vector2(-1.5, -41.5)
+shape = SubResource("RectangleShape2D_whtkq")

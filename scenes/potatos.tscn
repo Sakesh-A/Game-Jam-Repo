@@ -39,6 +39,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ubo4f"]
+radius = 2.0
 
 [node name="Potatos" type="StaticBody2D"]
 scale = Vector2(3, 3)
@@ -49,5 +50,5 @@ sprite_frames = SubResource("SpriteFrames_7gm2j")
 animation = &"Growing"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 12)
+position = Vector2(0, 14)
 shape = SubResource("CircleShape2D_ubo4f")

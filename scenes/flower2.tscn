@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://cer6o2onihbwu" path="res://assets/sprites/objects.png" id="1_ium0f"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_avsvi"]
-radius = 25.0
-height = 50.0
+radius = 24.0
+height = 48.0
 
 [node name="Pink Flower" type="StaticBody2D"]
 
@@ -16,5 +16,5 @@ region_enabled = true
 region_rect = Rect2(175.859, 383.334, 16.1697, 15.2495)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, -25)
+position = Vector2(0, -18)
 shape = SubResource("CapsuleShape2D_avsvi")
