@@ -1,7 +1,12 @@
 extends StaticBody2D 
 
-@export var interaction_distance: float = 100.0 # Adjust based on your game 
-@export var npc_dialogue: String = "Hello, traveler! I am a farmer.\n We need to disable player movement when this window appears and offer two buttons to make a decision" # Unique dialogue per NPC 
+@export var interaction_distance: float = 100.0 
+@export var npc_dialogue: String = "Sofia: “You ever notice how quiet it’s gotten around here?” 
+									Marcos: “What do you mean? I still hear the birds” 									
+									Sofia: “Not as many as before. A lot of trees have been lost
+									and with them, the things that lived in them.” 
+									Marcos: “I guess I never thought about that.” \n
+									Press q to close window"
 
 @onready var player = get_node("/root/Game/Player") 
 @onready var dialogue_box = get_node("/root/Game/CanvasLayer/DialogueBox")
