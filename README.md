@@ -1,4 +1,6 @@
-**Sierra Revival** – A Climate Change Strategy Game by The Cat Coders
+#**Sierra Revival**
+
+A Climate Change Strategy Game by The Cat Coders
 
 Created for the 2025 C3 Game Jam
 
