@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://cmisf2swqak7u"]
+[gd_scene load_steps=69 format=3 uid="uid://cmisf2swqak7u"]
 
 [ext_resource type="Script" uid="uid://bnqvhus63h3i0" path="res://scripts/dialogue_box.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://jo75wgd50jr" path="res://scenes/tile_map.tscn" id="1_txyxy"]
@@ -52,10 +52,51 @@
 [ext_resource type="PackedScene" uid="uid://duomqgl10ysod" path="res://scenes/fountain.tscn" id="50_rm0al"]
 [ext_resource type="PackedScene" uid="uid://bqaiure28c670" path="res://scenes/bird.tscn" id="51_i4re6"]
 [ext_resource type="Script" uid="uid://dt8fbnivqjd3d" path="res://scripts/sky.gd" id="52_ms3bu"]
-[ext_resource type="Script" uid="uid://dma0s45sy3t8h" path="res://scripts/light_rain.gd" id="52_pf7vy"]
-[ext_resource type="Script" uid="uid://dtgbg27bax7e8" path="res://scripts/dry.gd" id="53_3hbvx"]
-[ext_resource type="Script" uid="uid://cc7tsmept0tg" path="res://scripts/heavy_rain.gd" id="53_o8ni1"]
-[ext_resource type="Script" uid="uid://c2t8dnw85ok3l" path="res://scripts/drought.gd" id="54_q8j3a"]
+
+[sub_resource type="Curve" id="Curve_q8j3a"]
+_limits = [0.0, 0.3, 0.0, 1.0]
+_data = [Vector2(0.0229008, 0.00309432), 0.0, 0.0, 0, 0, Vector2(0.198473, 0.204224), 0.0, 0.0, 0, 0, Vector2(0.501272, 0.298084), 0.0, 0.0, 0, 0, Vector2(0.816794, 0.22721), 0.0, 0.0, 0, 0, Vector2(0.989822, 0.00692534), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="CurveTexture" id="CurveTexture_ms3bu"]
+curve = SubResource("Curve_q8j3a")
+
+[sub_resource type="Gradient" id="Gradient_7ixpq"]
+offsets = PackedFloat32Array(0, 0.0708447, 1)
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 0.0784314, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_bk1p3"]
+gradient = SubResource("Gradient_7ixpq")
+
+[sub_resource type="Curve" id="Curve_n8ral"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_yd4ix"]
+_limits = [0.0, 30.0, 0.0, 1.0]
+_data = [Vector2(0, 15.2505), 0.0, 0.0, 0, 0, Vector2(0.101781, 23.1041), 0.0, 0.0, 0, 0, Vector2(0.256997, 30), 0.0, 0.0, 0, 0, Vector2(1, 29.4253), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Curve" id="Curve_66xif"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_bnuda"]
+curve_x = SubResource("Curve_n8ral")
+curve_y = SubResource("Curve_yd4ix")
+curve_z = SubResource("Curve_66xif")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_0rmfi"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(10000, 1, 1)
+gravity = Vector3(0, 3000, 0)
+scale_min = 0.2
+scale_over_velocity_curve = SubResource("CurveXYZTexture_bnuda")
+color_initial_ramp = SubResource("GradientTexture1D_bk1p3")
+alpha_curve = SubResource("CurveTexture_ms3bu")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gee14"]
 bg_color = Color(0, 0, 0.133333, 1)
@@ -106,51 +147,6 @@ func _ready():
 	add_theme_color_override(\"font_color\", Color(1, 1, 1))
 "
 
-[sub_resource type="Curve" id="Curve_q8j3a"]
-_limits = [0.0, 0.3, 0.0, 1.0]
-_data = [Vector2(0.0229008, 0.00309432), 0.0, 0.0, 0, 0, Vector2(0.198473, 0.204224), 0.0, 0.0, 0, 0, Vector2(0.501272, 0.298084), 0.0, 0.0, 0, 0, Vector2(0.816794, 0.22721), 0.0, 0.0, 0, 0, Vector2(0.989822, 0.00692534), 0.0, 0.0, 0, 0]
-point_count = 5
-
-[sub_resource type="CurveTexture" id="CurveTexture_ms3bu"]
-curve = SubResource("Curve_q8j3a")
-
-[sub_resource type="Gradient" id="Gradient_7ixpq"]
-offsets = PackedFloat32Array(0, 0.0708447, 1)
-colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 0.0784314, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_bk1p3"]
-gradient = SubResource("Gradient_7ixpq")
-
-[sub_resource type="Curve" id="Curve_n8ral"]
-_limits = [0.0, 3.0, 0.0, 1.0]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="Curve" id="Curve_yd4ix"]
-_limits = [0.0, 30.0, 0.0, 1.0]
-_data = [Vector2(0, 15.2505), 0.0, 0.0, 0, 0, Vector2(0.101781, 23.1041), 0.0, 0.0, 0, 0, Vector2(0.256997, 30), 0.0, 0.0, 0, 0, Vector2(1, 29.4253), 0.0, 0.0, 0, 0]
-point_count = 4
-
-[sub_resource type="Curve" id="Curve_66xif"]
-_limits = [0.0, 3.0, 0.0, 1.0]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_bnuda"]
-curve_x = SubResource("Curve_n8ral")
-curve_y = SubResource("Curve_yd4ix")
-curve_z = SubResource("Curve_66xif")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_0rmfi"]
-particle_flag_disable_z = true
-emission_shape = 3
-emission_box_extents = Vector3(10000, 1, 1)
-gravity = Vector3(0, 3000, 0)
-scale_min = 0.2
-scale_over_velocity_curve = SubResource("CurveXYZTexture_bnuda")
-color_initial_ramp = SubResource("GradientTexture1D_bk1p3")
-alpha_curve = SubResource("CurveTexture_ms3bu")
-
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
 position = Vector2(981, 386)
@@ -187,6 +183,11 @@ color = Color(0.564706, 0.858824, 0.411765, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 5
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="CanvasLayer"]
+unique_name_in_owner = true
+amount = 800000
+process_material = SubResource("ParticleProcessMaterial_0rmfi")
 
 [node name="NextDayButton" type="Button" parent="CanvasLayer"]
 anchors_preset = 5
@@ -1042,42 +1043,30 @@ position = Vector2(299, 226)
 layer = 3
 script = ExtResource("52_ms3bu")
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="Sky"]
-amount = 800000
-process_material = SubResource("ParticleProcessMaterial_0rmfi")
-
 [node name="LightRain" type="ColorRect" parent="Sky"]
-visible = false
 offset_left = -4672.0
 offset_top = -2910.0
 offset_right = 10150.0
 offset_bottom = 3506.0
 color = Color(0.376471, 0.435294, 0.52549, 0.223529)
-script = ExtResource("52_pf7vy")
 
 [node name="Dry" type="ColorRect" parent="Sky"]
-visible = false
 offset_left = -4672.0
 offset_top = -2910.0
 offset_right = 10150.0
 offset_bottom = 3506.0
 color = Color(0.403401, 0.45602, 0.277826, 0.168627)
-script = ExtResource("53_3hbvx")
 
 [node name="Drought" type="ColorRect" parent="Sky"]
-visible = false
 offset_left = -4672.0
 offset_top = -2910.0
 offset_right = 10150.0
 offset_bottom = 3506.0
 color = Color(0.695898, 0.800904, 0.551689, 0.321569)
-script = ExtResource("54_q8j3a")
 
 [node name="HeavyRain" type="ColorRect" parent="Sky"]
-visible = false
 offset_left = -4672.0
 offset_top = -2910.0
 offset_right = 10150.0
 offset_bottom = 3506.0
 color = Color(0.360784, 0.415686, 0.639216, 0.317647)
-script = ExtResource("53_o8ni1")
