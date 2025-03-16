@@ -1,26 +1,18 @@
 extends Node2D 
 
-@export var interaction_distance: float = 100.0
-@export var cost: int = 2
-@export var action_description: String = "Hello, I am a bag of tree seeds! I cost "
+@export var interaction_distance: float = 100.0 
+@export var cost: int = 1 
+@export var action_description: String = "Hello, I am a cat! I cost "  
 
 @onready var player = get_node("/root/Game/Player")
 @onready var action_box = get_node("/root/Game/CanvasLayer/ActionBox")
 @onready var dialogue_box = get_node("/root/Game/CanvasLayer/DialogueBox") 
 
-var interacted: bool = false 
-
 func _ready(): 
-	$InteractionIcon.visible = false
-	$AnimatedSprite2D.play("seeds")
+	$InteractionIcon.visible = false 
+	$AnimatedSprite2D.play("cat")
 	
-func _process(_delta: float) -> void:
-	if GameManager.tree_planted == 3:
-		visible = false
-		
-	if interacted: 
-		$InteractionIcon.visible = false 
-		return  
+func _process(_delta: float) -> void: 
 
 	if global_position.distance_to(player.global_position) < interaction_distance: 
 		$InteractionIcon.visible = true
@@ -34,21 +26,10 @@ func _process(_delta: float) -> void:
 				dialogue_box.open_dialogue(action_text, get_path())
 			else:
 				action_text += "\n Press E to buy" 
-				action_box.open_action(action_text, get_path())
+				action_box.open_action(action_text, get_path()) # Pass the _action function as a callback
 	else:
 		$InteractionIcon.visible = false
   
 
-func _action(): 
-	$AnimatedSprite2D.play("hole")
-	if interacted: 
-		return  
-
+func _action():
 	GameManager.action_points -= cost 
-	GameManager.soil_quality += 2
-	GameManager.water -= 2
-	GameManager.biodiversity += 2
-	GameManager.tree_planted = 1
- 
-	interacted = true 
- 

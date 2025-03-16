@@ -2,16 +2,16 @@ extends Node2D
 
 @export var interaction_distance: float = 100.0 # Adjust based on your game 
 @export var cost: int = 2
-@export var action_description: String = "Hello, I am a bucket! I cost " # Unique dialogue per NPC 
+@export var action_description: String = "Hello, I am a bucket! I cost "
 
 @onready var player = get_node("/root/Game/Player")
-@onready var action_box = get_node("/root/Game/CanvasLayer/ActionBox") # Get the dialogue box node 
-@onready var dialogue_box = get_node("/root/Game/CanvasLayer/DialogueBox") # Get the dialogue box node 
+@onready var action_box = get_node("/root/Game/CanvasLayer/ActionBox")
+@onready var dialogue_box = get_node("/root/Game/CanvasLayer/DialogueBox")  
 
-var interacted: bool = false # Track if the object has already been used 
+var interacted: bool = false
 
 func _ready(): 
-	$InteractionIcon.visible = false # Hide the indicator initially 
+	$InteractionIcon.visible = false
 	GameManager.next_day.connect(_next_day_started) 
 	$AnimatedSprite2D.play("empty")
 
@@ -19,17 +19,15 @@ func _next_day_started():
 	interacted = false 
 	$AnimatedSprite2D.play("empty")
 	
-func _process(_delta: float) -> void: # If already interacted, disable further interaction 
+func _process(_delta: float) -> void: 
 	if interacted: 
 		$InteractionIcon.visible = false 
 		return  
 
-	# Check if the player is within interaction range 
 	if global_position.distance_to(player.global_position) < interaction_distance: 
-		$InteractionIcon.visible = true # Show indicator
+		$InteractionIcon.visible = true 
 		$InteractionIcon.play("default") 
 	 
-	# Check for "interact" input 
 		if Input.is_action_just_pressed("interact"):
 			var action_text = action_description + str(cost) + "\n You have this many AP points: " + str(GameManager.action_points) 
 			if GameManager.action_points < cost:
@@ -37,12 +35,12 @@ func _process(_delta: float) -> void: # If already interacted, disable further i
 				dialogue_box.open_dialogue(action_text, get_path())
 			else:
 				action_text += "\n Press E to buy" 
-				action_box.open_action(action_text, get_path()) # Pass the _action function as a callback
+				action_box.open_action(action_text, get_path())
 	else:
-		$InteractionIcon.visible = false # Hide indicator 
+		$InteractionIcon.visible = false
   
 
-func _action(): # Ensure action is performed only once 
+func _action():
 	$AnimatedSprite2D.play("full")
 	if interacted: 
 		return  
@@ -51,6 +49,5 @@ func _action(): # Ensure action is performed only once
 	GameManager.soil_quality += 1 
 	GameManager.water += 2 
  
-# Mark as interacted and disable future interactions 
 	interacted = true 
  
