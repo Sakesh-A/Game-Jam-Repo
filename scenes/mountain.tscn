@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4l0800cqti21"]
+
+[ext_resource type="Texture2D" uid="uid://warkrmk8kod5" path="res://assets/sierra nevada-1.png (1).png" id="1_wb4uc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_avsvi"]
+radius = 17.0
+height = 36.0
+
+[node name="mountain" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, -15)
+shape = SubResource("CapsuleShape2D_avsvi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(146, -216)
+scale = Vector2(19.2619, 19.2619)
+texture = ExtResource("1_wb4uc")

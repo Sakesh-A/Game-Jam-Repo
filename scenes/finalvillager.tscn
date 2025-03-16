@@ -81,5 +81,4 @@ animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-9.00001, 16)
-scale = Vector2(1, 1)
 shape = SubResource("CircleShape2D_gw8xa")

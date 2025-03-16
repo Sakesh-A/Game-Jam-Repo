@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://ckt3bcdi2oqm5"]
+
+[ext_resource type="Script" uid="uid://rvsxt5h5hufj" path="res://scripts/seeds.gd" id="1_htn50"]
+[ext_resource type="Texture2D" uid="uid://cer6o2onihbwu" path="res://assets/sprites/objects.png" id="2_htn50"]
+[ext_resource type="Texture2D" uid="uid://dfd8hjwst2ayp" path="res://assets/sprites/icons.png" id="4_mvwc5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_isc0p"]
+radius = 10.198
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ha3y"]
+atlas = ExtResource("4_mvwc5")
+region = Rect2(37, 153, 10, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73ou4"]
+atlas = ExtResource("4_mvwc5")
+region = Rect2(59, 157, 6, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fjo7a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ha3y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73ou4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="Seeds" type="StaticBody2D"]
+script = ExtResource("1_htn50")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2, -7)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("2_htn50")
+region_enabled = true
+region_rect = Rect2(434.25, 146.422, 11.1476, 14.9378)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 4)
+shape = SubResource("CircleShape2D_isc0p")
+
+[node name="InteractionIcon" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -72)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_fjo7a")
