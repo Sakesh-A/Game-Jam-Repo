@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://cmisf2swqak7u"]
+[gd_scene load_steps=54 format=3 uid="uid://cmisf2swqak7u"]
 
 [ext_resource type="Script" uid="uid://bnqvhus63h3i0" path="res://scripts/dialogue_box.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://jo75wgd50jr" path="res://scenes/tile_map.tscn" id="1_txyxy"]
@@ -42,9 +42,10 @@
 [ext_resource type="PackedScene" uid="uid://ckt3bcdi2oqm5" path="res://scenes/seeds.tscn" id="40_m4url"]
 [ext_resource type="PackedScene" uid="uid://d4l0800cqti21" path="res://scenes/mountain.tscn" id="41_8ool0"]
 [ext_resource type="PackedScene" uid="uid://b3dqncnewrsfs" path="res://scenes/mountain_flpped.tscn" id="42_pr1ej"]
-[ext_resource type="PackedScene" path="res://scenes/bucket.tscn" id="43_05nbr"]
-[ext_resource type="PackedScene" path="res://scenes/barrel.tscn" id="44_0sl42"]
-[ext_resource type="AudioStream" uid="uid://clgqtql3w6q2i" path="res://EditedAudioForGame.mp3" id="45_oaba0"]
+[ext_resource type="PackedScene" uid="uid://kf18h3iheutw" path="res://scenes/bucket.tscn" id="43_05nbr"]
+[ext_resource type="PackedScene" uid="uid://cb3x3rpdx4fhi" path="res://scenes/barrel.tscn" id="44_0sl42"]
+[ext_resource type="AudioStream" uid="uid://clgqtql3w6q2i" path="res://assets/EditedAudioForGame.mp3" id="45_oaba0"]
+[ext_resource type="PackedScene" uid="uid://dqe8s1hmc544" path="res://scenes/sapling.tscn" id="46_458eo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gee14"]
 bg_color = Color(0, 0, 0.133333, 1)
@@ -287,7 +288,7 @@ zoom = Vector2(0.7, 0.7)
 position = Vector2(2620, 1068)
 
 [node name="Tree" parent="." instance=ExtResource("2_yqjtg")]
-position = Vector2(3866, 503)
+position = Vector2(3828, 50)
 
 [node name="Chicken" parent="." instance=ExtResource("7_qnb83")]
 position = Vector2(219, 1683)
@@ -917,7 +918,7 @@ position = Vector2(-841, 2546)
 position = Vector2(3904, 2545)
 
 [node name="Tree12" parent="." instance=ExtResource("2_yqjtg")]
-position = Vector2(-781, 194)
+position = Vector2(-748, 131)
 
 [node name="Tree13" parent="." instance=ExtResource("2_yqjtg")]
 position = Vector2(-2119, 1749)
@@ -938,7 +939,7 @@ position = Vector2(-3468, 21)
 position = Vector2(-1695, 25)
 
 [node name="Tree19" parent="." instance=ExtResource("2_yqjtg")]
-position = Vector2(4842, 71)
+position = Vector2(4279, 503)
 
 [node name="Tree20" parent="." instance=ExtResource("2_yqjtg")]
 position = Vector2(6194, 89)
@@ -958,3 +959,6 @@ position = Vector2(3071, 795)
 [node name="audio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("45_oaba0")
 volume_db = 24.0
+
+[node name="Tree22" parent="." instance=ExtResource("46_458eo")]
+position = Vector2(285, 1183)

@@ -7,7 +7,8 @@ var weather: int = 0
 var prev_weather: int = 0 
 var day: int = 1 
 var action_points: int = 5 
-signal game_start 
+var tree_planted: int = 0
+var water_maintained: int = 0 
 signal next_day 
 signal game_end 
 
@@ -21,7 +22,7 @@ var weather_conditions = {
 @export var total_days: int = 5 
 
 func _ready() -> void: 
-	game_start.emit() 
+	next_day.emit() 
 
 func next_level(): 
 	if day > 5: 
@@ -34,6 +35,8 @@ func next_level():
 	water -= 1 
 	prev_weather = weather 
 	update_weather() 
+	if tree_planted > 0:
+		tree_planted += 1
 	
 func update_weather(): 
 	randomize() 
@@ -66,5 +69,3 @@ func process_weather():
 	if weather_conditions[weather] == "Rainy": 
 		water += 4 
 		soil_quality += 2 
-
- 

@@ -17,7 +17,7 @@ func _ready():
 
 func _next_day_started(): 
 	interacted = false 
-	cost = 2 
+	$AnimatedSprite2D.play("empty")
 	
 func _process(_delta: float) -> void: # If already interacted, disable further interaction 
 	if interacted: 

@@ -12,14 +12,12 @@ var interacted: bool = false # Track if the object has already been used
 
 func _ready(): 
 	$InteractionIcon.visible = false # Hide the indicator initially 
-	GameManager.next_day.connect(_next_day_started) 
 	$AnimatedSprite2D.play("seeds")
-
-func _next_day_started(): 
-	interacted = false 
-	cost = 2 
 	
 func _process(_delta: float) -> void: # If already interacted, disable further interaction 
+	if GameManager.tree_planted == 3:
+		visible = false
+		
 	if interacted: 
 		$InteractionIcon.visible = false 
 		return  
@@ -48,8 +46,10 @@ func _action(): # Ensure action is performed only once
 		return  
 
 	GameManager.action_points -= cost 
-	GameManager.soil_quality += 1 
-	GameManager.water += 3 
+	GameManager.soil_quality += 2
+	GameManager.water -= 2
+	GameManager.biodiversity += 2
+	GameManager.tree_planted = 1
  
 # Mark as interacted and disable future interactions 
 	interacted = true 
