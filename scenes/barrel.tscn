@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cb3x3rpdx4fhi"]
+
+[ext_resource type="Texture2D" uid="uid://cer6o2onihbwu" path="res://assets/sprites/objects.png" id="1_q36op"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q36op"]
+radius = 24.0208
+
+[node name="Chair Bench" type="StaticBody2D"]
+
+[node name="chair" type="Sprite2D" parent="."]
+position = Vector2(2, -44)
+scale = Vector2(5.32692, 5.32692)
+texture = ExtResource("1_q36op")
+region_enabled = true
+region_rect = Rect2(304.503, 160.022, 15.9931, 16.0572)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -21)
+shape = SubResource("CircleShape2D_q36op")

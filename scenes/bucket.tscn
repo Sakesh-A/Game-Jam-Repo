@@ -1,45 +1,45 @@
-[gd_scene load_steps=11 format=3 uid="uid://ckt3bcdi2oqm5"]
+[gd_scene load_steps=11 format=3 uid="uid://kf18h3iheutw"]
 
-[ext_resource type="Script" uid="uid://rvsxt5h5hufj" path="res://scripts/seeds.gd" id="1_htn50"]
-[ext_resource type="Texture2D" uid="uid://cer6o2onihbwu" path="res://assets/sprites/objects.png" id="2_htn50"]
-[ext_resource type="Texture2D" uid="uid://dfd8hjwst2ayp" path="res://assets/sprites/icons.png" id="4_mvwc5"]
+[ext_resource type="Script" uid="uid://bf4ms3rq1bl8f" path="res://scripts/bucket.gd" id="1_axt1m"]
+[ext_resource type="Texture2D" uid="uid://cer6o2onihbwu" path="res://assets/sprites/objects.png" id="2_j3v7k"]
+[ext_resource type="Texture2D" uid="uid://dfd8hjwst2ayp" path="res://assets/sprites/icons.png" id="3_ox4ou"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_htn50"]
-atlas = ExtResource("2_htn50")
-region = Rect2(464, 80, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_56n6l"]
+atlas = ExtResource("2_j3v7k")
+region = Rect2(448, 160, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rk6je"]
-atlas = ExtResource("2_htn50")
-region = Rect2(432, 144, 16, 16)
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqrjh"]
+atlas = ExtResource("2_j3v7k")
+region = Rect2(448, 176, 16, 16)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_1imuv"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_xgi4v"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_htn50")
+"texture": SubResource("AtlasTexture_56n6l")
 }],
 "loop": true,
-"name": &"hole",
+"name": &"empty",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rk6je")
+"texture": SubResource("AtlasTexture_rqrjh")
 }],
 "loop": true,
-"name": &"seeds",
+"name": &"full",
 "speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_isc0p"]
-radius = 10.198
+radius = 18.0278
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3ha3y"]
-atlas = ExtResource("4_mvwc5")
+atlas = ExtResource("3_ox4ou")
 region = Rect2(37, 153, 10, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_73ou4"]
-atlas = ExtResource("4_mvwc5")
+atlas = ExtResource("3_ox4ou")
 region = Rect2(59, 157, 6, 12)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fjo7a"]
@@ -57,13 +57,13 @@ animations = [{
 }]
 
 [node name="Seeds" type="StaticBody2D"]
-script = ExtResource("1_htn50")
+script = ExtResource("1_axt1m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1, -9)
+position = Vector2(-2, -7)
 scale = Vector2(3.5, 3.5)
-sprite_frames = SubResource("SpriteFrames_1imuv")
-animation = &"hole"
+sprite_frames = SubResource("SpriteFrames_xgi4v")
+animation = &"empty"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 4)

@@ -1,8 +1,8 @@
 extends Node2D 
 
 @export var interaction_distance: float = 100.0 # Adjust based on your game 
-@export var cost: int = 1
-@export var action_description: String = "Hello, I am a bag of tree seeds! I cost " # Unique dialogue per NPC 
+@export var cost: int = 2
+@export var action_description: String = "Hello, I am a bucket! I cost " # Unique dialogue per NPC 
 
 @onready var player = get_node("/root/Game/Player")
 @onready var action_box = get_node("/root/Game/CanvasLayer/ActionBox") # Get the dialogue box node 
@@ -13,7 +13,7 @@ var interacted: bool = false # Track if the object has already been used
 func _ready(): 
 	$InteractionIcon.visible = false # Hide the indicator initially 
 	GameManager.next_day.connect(_next_day_started) 
-	$AnimatedSprite2D.play("seeds")
+	$AnimatedSprite2D.play("empty")
 
 func _next_day_started(): 
 	interacted = false 
@@ -43,13 +43,13 @@ func _process(_delta: float) -> void: # If already interacted, disable further i
   
 
 func _action(): # Ensure action is performed only once 
-	$AnimatedSprite2D.play("hole")
+	$AnimatedSprite2D.play("full")
 	if interacted: 
 		return  
-
+		
 	GameManager.action_points -= cost 
 	GameManager.soil_quality += 1 
-	GameManager.water += 3 
+	GameManager.water += 2 
  
 # Mark as interacted and disable future interactions 
 	interacted = true 
