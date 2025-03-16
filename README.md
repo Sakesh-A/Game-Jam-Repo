@@ -1,4 +1,4 @@
-#**Sierra Revival**
+# **Sierra Revival**
 
 A Climate Change Strategy Game by The Cat Coders
 
