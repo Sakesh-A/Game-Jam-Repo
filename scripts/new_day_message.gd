@@ -10,10 +10,18 @@ func _ready():
 	GameManager.next_day.connect(_next_day_started)
 	GameManager.game_end.connect(_end_game) 
 	
-	var text = ""
+	var text = "\nYou are a young boy in a small village nestled in the 
+	rugged mountains of Sierra Nevada. Once thriving, 
+	the land now struggles under the weight of climate 
+	change—rivers run dry, soil loses its richness, 
+	and the wildlife fades. The villagers look to 
+	you for help. Speak with them, learn their struggles,
+	 and take action to restore balance to the land. 
+	Each day, you have 5 Action Points—but choose wisely. 
+	You can’t do everything."
 	text += "\n🌤 *Today's Weather Forecast:* " + GameManager.weather_conditions[GameManager.prev_weather] + "."
 	text += "\n🌦 *Tomorrow's Prediction:* " + GameManager.weather_conditions[GameManager.weather] + "."
-	open_dialogue("🌿 Welcome to the Sierra Nevada!" + text + "\nPress q to begin your journey.") 
+	open_dialogue("Welcome to the Sierra Revival!" + text + "\nPress q to begin your journey.") 
 
 func generate_day_text() -> String: 
 	var text = "\n🌿 *Daily Report* 🌿\n"

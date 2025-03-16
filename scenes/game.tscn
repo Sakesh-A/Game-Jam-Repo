@@ -150,9 +150,9 @@ script = ExtResource("8_nepv3")
 
 [node name="DialogueBox" type="ColorRect" parent="CanvasLayer"]
 offset_left = 702.0
-offset_top = 442.0
+offset_top = 466.0
 offset_right = 1358.0
-offset_bottom = 863.0
+offset_bottom = 887.0
 color = Color(0.364706, 0.509804, 0.666667, 0.74902)
 script = ExtResource("1_p57ef")
 
@@ -164,27 +164,26 @@ offset_right = 215.0
 offset_bottom = 111.0
 
 [node name="DayMessage" type="ColorRect" parent="CanvasLayer"]
-visible = false
-offset_left = 702.0
-offset_top = 442.0
-offset_right = 1502.0
-offset_bottom = 942.0
+offset_left = 700.0
+offset_top = 462.0
+offset_right = 1500.0
+offset_bottom = 962.0
 color = Color(0.560982, 0.487922, 0.353446, 0.968627)
 script = ExtResource("3_02fa5")
 
 [node name="DayText" type="Label" parent="CanvasLayer/DayMessage"]
 layout_mode = 0
-offset_left = 98.0
-offset_top = 168.0
-offset_right = 138.0
-offset_bottom = 191.0
+offset_left = 71.0
+offset_top = 82.0
+offset_right = 111.0
+offset_bottom = 105.0
 text = "b"
 
 [node name="ActionBox" type="ColorRect" parent="CanvasLayer"]
-offset_left = 702.0
-offset_top = 442.0
-offset_right = 1359.0
-offset_bottom = 860.0
+offset_left = 698.0
+offset_top = 471.0
+offset_right = 1355.0
+offset_bottom = 889.0
 color = Color(0.365741, 0.511047, 0.665884, 0.74902)
 script = ExtResource("4_nepv3")
 
