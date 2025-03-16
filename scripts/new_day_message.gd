@@ -1,13 +1,12 @@
 extends ColorRect 
 
-@onready var player = get_node("/root/Game/Player") # Get the player automatically 
-@onready var dialogue = "" # Get the Label inside the DialogueBox 
+@onready var player = get_node("/root/Game/Player")
+@onready var dialogue = ""
 @onready var button = get_node("/root/Game/CanvasLayer/NextDayButton") 
 
 func _ready(): 
 	get_viewport().size_changed.connect(center_dialogue_box) 
-	# Update when window resizes 
-	visible = false # Start hidden
+	visible = false
 	GameManager.next_day.connect(_next_day_started)
 	GameManager.game_end.connect(_end_game) 
 	var text = "" 
@@ -56,7 +55,7 @@ func open_dialogue(day_text: String):
 func close_dialogue(): 
 	visible = false 
 	if player: 
-		player.set_process(true) # Re-enable player movement button.visible = true 
+		player.set_process(true)
 	button.visible = true
 
  

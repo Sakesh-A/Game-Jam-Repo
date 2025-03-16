@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-@export var flip_interval: float = 2.0  # Time in seconds between flips
+@export var flip_interval: float = 2.0
 
 func _ready():
 	$AnimatedSprite2D.play("default")
@@ -17,4 +17,4 @@ func start_flipping():
 
 func _on_flip_timer_timeout():
 	if randi() % 2 == 0:
-		$AnimatedSprite2D.flip_h = not $AnimatedSprite2D.flip_h  # Randomly flips the sprite horizontally
+		$AnimatedSprite2D.flip_h = not $AnimatedSprite2D.flip_h

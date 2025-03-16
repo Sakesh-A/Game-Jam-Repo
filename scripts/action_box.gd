@@ -1,8 +1,8 @@
 extends ColorRect 
 
-@onready var player = get_node("/root/Game/Player") # Get the player automatically
-@onready var action_label = "" # Get the Label inside the DialogueBox 
-@onready var action_path = "" # Store path as a string, not a node. 
+@onready var player = get_node("/root/Game/Player")
+@onready var action_label = ""
+@onready var action_path = ""
 
 
 func _ready(): 
@@ -29,11 +29,11 @@ func center_action_box():
 func open_action(action_text: String, action: String):
 	$ActionText.text = action_text 
 	visible = true 
-	action_path = action # Store the string path 
+	action_path = action
 
 func close_action(): 
 	visible = false 
 	if player: 
-		player.set_process(true) # Re-enable player movement 
+		player.set_process(true)
 
  

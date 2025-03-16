@@ -3,6 +3,7 @@ var cur_water: float = 50.0
 var max_water: float = 100.0
 
 func _ready():
+	# AI citation: ChatGPT fourth row in the table
 	set_progress(cur_water)
 
 func set_progress(value: float):

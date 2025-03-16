@@ -8,6 +8,7 @@ var growth_time = 1.0
 func _ready():
 	start_growth_cycle()
 
+# AI citation: ChatGPT first row in the table
 func start_growth_cycle():
 	var timer = Timer.new()
 	timer.wait_time = growth_time

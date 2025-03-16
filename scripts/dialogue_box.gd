@@ -1,12 +1,12 @@
 extends ColorRect 
 
-@onready var player = get_node("/root/Game/Player") # Get the player automatically 
-@onready var dialogue = "" # Get the Label inside the DialogueBox 
-@onready var dialogue_path = "" # Store path as a string, not a node. 
+@onready var player = get_node("/root/Game/Player")
+@onready var dialogue = ""
+@onready var dialogue_path = ""
 
 func _ready(): 
-	get_viewport().size_changed.connect(center_dialogue_box) # Update when window resizes 
-	visible = false # Start hidden 
+	get_viewport().size_changed.connect(center_dialogue_box)
+	visible = false
 
 func _process(_delta): 
 	center_dialogue_box() 
@@ -24,6 +24,6 @@ func open_dialogue(dialogue_text: String, _path: String):
 func close_dialogue(): 
 	visible = false 
 	if player: 
-		player.set_process(true) # Re-enable player movement 
+		player.set_process(true)
 
  
