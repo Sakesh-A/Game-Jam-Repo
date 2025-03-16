@@ -149,18 +149,17 @@ script = ExtResource("8_nepv3")
 [node name="DialogueBox" type="ColorRect" parent="CanvasLayer"]
 offset_left = 702.0
 offset_top = 442.0
-offset_right = 1502.0
-offset_bottom = 942.0
-color = Color(0.497474, 0.497474, 0.497474, 1)
+offset_right = 1288.0
+offset_bottom = 791.0
+color = Color(0.396078, 0.513726, 0.619608, 0.788235)
 script = ExtResource("1_p57ef")
 
 [node name="DialogueText" type="Label" parent="CanvasLayer/DialogueBox"]
 layout_mode = 0
-offset_left = 98.0
-offset_top = 168.0
-offset_right = 138.0
-offset_bottom = 191.0
-text = "b"
+offset_left = 105.0
+offset_top = 80.0
+offset_right = 215.0
+offset_bottom = 111.0
 
 [node name="DayMessage" type="ColorRect" parent="CanvasLayer"]
 visible = false
@@ -180,20 +179,19 @@ offset_bottom = 191.0
 text = "b"
 
 [node name="ActionBox" type="ColorRect" parent="CanvasLayer"]
-visible = false
 offset_left = 702.0
 offset_top = 442.0
-offset_right = 1502.0
-offset_bottom = 942.0
-color = Color(0.497474, 0.497474, 0.497474, 1)
+offset_right = 1290.0
+offset_bottom = 801.0
+color = Color(0.392157, 0.501961, 0.67451, 0.74902)
 script = ExtResource("4_nepv3")
 
 [node name="ActionText" type="Label" parent="CanvasLayer/ActionBox"]
 layout_mode = 0
-offset_left = 98.0
-offset_top = 168.0
-offset_right = 138.0
-offset_bottom = 191.0
+offset_left = 55.0
+offset_top = 46.0
+offset_right = 133.0
+offset_bottom = 69.0
 text = "b"
 
 [node name="WaterProgress" type="ProgressBar" parent="CanvasLayer"]
