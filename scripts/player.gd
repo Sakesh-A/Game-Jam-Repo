@@ -21,12 +21,11 @@ func _physics_process(_delta: float) -> void:
 func _ready():
 	GameManager.next_day.connect(_next_day_started) 
 	global_position = Vector2(1750, 1250)
-"""
+
 	if audio.stream:
 		audio.stream.loop = true
 	audio.play()
-	$InteractionIcon.visible = true
-"""
+
 
 func _next_day_started(): 
 	global_position = Vector2(1750, 1250)

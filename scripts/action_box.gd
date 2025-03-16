@@ -3,10 +3,23 @@ extends ColorRect
 @onready var player = get_node("/root/Game/Player")
 @onready var action_label = ""
 @onready var action_path = ""
+@onready var dialogue_label = $ActionText
 
 
 func _ready(): 
 	get_viewport().size_changed.connect(center_action_box) 
+	dialogue_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER # Center-align horizontally
+	dialogue_label.vertical_alignment = VERTICAL_ALIGNMENT_TOP # Center-align vertically
+	
+	dialogue_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	dialogue_label.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	
+	color = Color(0.1, 0.2, 0.5, 0.8)
+	visible = false  # Start hidden
+
+	size = Vector2(400, 200)
+	dialogue_label.custom_minimum_size = Vector2(280, 80)
+	dialogue_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	visible = false  
 
 func _process(_delta): 
