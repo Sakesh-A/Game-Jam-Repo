@@ -19,7 +19,7 @@ func _ready():
 	Once you have completed your daily tasks, click \"Next Day\" at the top to proceed."
 	text += "\n🌤 *Today's Weather Forecast:* " + GameManager.weather_conditions[GameManager.prev_weather] + "."
 	text += "\n🌦 *Tomorrow's Prediction:* " + GameManager.weather_conditions[GameManager.weather] + "."
-	open_dialogue("Welcome to the Sierra Revival!" + text + "\nPress q to begin your journey.") 
+	open_dialogue("Welcome to the Sierra Revival!" + text + "\nPress q to begin your journey." + "\n\nGame made by The Cat Coders!") 
 
 func generate_day_text() -> String: 
 	var text = "\n🌿 *Daily Report* 🌿\n"
