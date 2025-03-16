@@ -1,4 +1,5 @@
 extends CharacterBody2D
+@onready var audio = $"../audio"
 
 func _physics_process(delta: float) -> void:
 	var direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
@@ -14,3 +15,8 @@ func _physics_process(delta: float) -> void:
 		
 	else:
 		$AnimatedSprite2D.play("idle")
+		
+func _ready():
+	if audio.stream:
+		audio.stream.loop = true
+	audio.play()
