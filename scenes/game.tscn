@@ -42,8 +42,8 @@
 [ext_resource type="PackedScene" uid="uid://ckt3bcdi2oqm5" path="res://scenes/seeds.tscn" id="40_m4url"]
 [ext_resource type="PackedScene" uid="uid://d4l0800cqti21" path="res://scenes/mountain.tscn" id="41_8ool0"]
 [ext_resource type="PackedScene" uid="uid://b3dqncnewrsfs" path="res://scenes/mountain_flpped.tscn" id="42_pr1ej"]
-[ext_resource type="PackedScene" uid="uid://kf18h3iheutw" path="res://scenes/bucket.tscn" id="43_05nbr"]
-[ext_resource type="PackedScene" uid="uid://cb3x3rpdx4fhi" path="res://scenes/barrel.tscn" id="44_0sl42"]
+[ext_resource type="PackedScene" path="res://scenes/bucket.tscn" id="43_05nbr"]
+[ext_resource type="PackedScene" path="res://scenes/barrel.tscn" id="44_0sl42"]
 [ext_resource type="AudioStream" uid="uid://clgqtql3w6q2i" path="res://EditedAudioForGame.mp3" id="45_oaba0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gee14"]
@@ -957,4 +957,4 @@ position = Vector2(3071, 795)
 
 [node name="audio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("45_oaba0")
-volume_db = 15.326
+volume_db = 24.0
