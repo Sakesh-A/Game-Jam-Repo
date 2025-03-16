@@ -1,0 +1,83 @@
+[gd_scene load_steps=13 format=3 uid="uid://bvpvgirp14b33"]
+
+[ext_resource type="Script" uid="uid://c0bdklcyvmt2d" path="res://scripts/farmer.gd" id="1_2qlof"]
+[ext_resource type="Texture2D" uid="uid://c4tmlux3eg6js" path="res://assets/sprites/farmer.png" id="1_vltvv"]
+[ext_resource type="Texture2D" uid="uid://dfd8hjwst2ayp" path="res://assets/sprites/icons.png" id="3_hkter"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qlof"]
+atlas = ExtResource("1_vltvv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hkter"]
+atlas = ExtResource("1_vltvv")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7541a"]
+atlas = ExtResource("1_vltvv")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rov4t"]
+atlas = ExtResource("1_vltvv")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_go23t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2qlof")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hkter")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7541a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rov4t")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hkter"]
+radius = 21.0238
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ha3y"]
+atlas = ExtResource("3_hkter")
+region = Rect2(37, 153, 10, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73ou4"]
+atlas = ExtResource("3_hkter")
+region = Rect2(59, 157, 6, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7541a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ha3y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73ou4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="Farmer" type="StaticBody2D"]
+script = ExtResource("1_2qlof")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_go23t")
+animation = &"idle"
+offset = Vector2(0, -12.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hkter")
+
+[node name="InteractionIcon" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -98)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_7541a")

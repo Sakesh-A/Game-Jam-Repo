@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://0h7v2amifiye"]
+
+[ext_resource type="Texture2D" uid="uid://bfqorxs8epjrb" path="res://assets/sprites/shovel.png" id="1_081d1"]
+[ext_resource type="Script" uid="uid://c28rp7hwhv1uu" path="res://scripts/shovel.gd" id="1_g60nu"]
+[ext_resource type="Texture2D" uid="uid://fueq0dsybojd" path="res://assets/sprites/dirt.png" id="2_g60nu"]
+[ext_resource type="Texture2D" uid="uid://dfd8hjwst2ayp" path="res://assets/sprites/icons.png" id="4_isc0p"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_isc0p"]
+radius = 14.3178
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ha3y"]
+atlas = ExtResource("4_isc0p")
+region = Rect2(37, 153, 10, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73ou4"]
+atlas = ExtResource("4_isc0p")
+region = Rect2(59, 157, 6, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fjo7a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ha3y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73ou4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="Shovel" type="StaticBody2D"]
+script = ExtResource("1_g60nu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(16, -24)
+rotation = 0.507891
+scale = Vector2(2, 2)
+texture = ExtResource("1_081d1")
+region_enabled = true
+region_rect = Rect2(36, 0, 28, 64)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(9, -99)
+scale = Vector2(6, 6)
+texture = ExtResource("2_g60nu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-12, 21)
+shape = SubResource("CircleShape2D_isc0p")
+
+[node name="InteractionIcon" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -96)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_fjo7a")

@@ -1,11 +1,11 @@
-[gd_scene load_steps=47 format=3 uid="uid://cmisf2swqak7u"]
+[gd_scene load_steps=45 format=3 uid="uid://cmisf2swqak7u"]
 
-[ext_resource type="Script" uid="uid://bnqvhus63h3i0" path="res://scripts/dialogue_box.gd" id="1_p57ef"]
+[ext_resource type="Script" uid="uid://bnqvhus63h3i0" path="res://scripts/dialouge_box.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://dfw2o7eoxxn6g" path="res://tile_map.tscn" id="1_txyxy"]
 [ext_resource type="PackedScene" uid="uid://d2jxw073qk3kf" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://dej48tc2kyvnq" path="res://scripts/Water_bar.gd" id="2_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://dmg1sfr2q6g1m" path="res://scenes/tree.tscn" id="2_yqjtg"]
-[ext_resource type="Script" uid="uid://cn76fh5ywoiv7" path="res://scripts/new_day_message.gd" id="3_02fa5"]
+[ext_resource type="Script" uid="uid://cn76fh5ywoiv7" path="res://scripts/day_message.gd" id="3_02fa5"]
 [ext_resource type="PackedScene" uid="uid://bvpvgirp14b33" path="res://scenes/farmer.tscn" id="3_lnu2h"]
 [ext_resource type="Script" uid="uid://0xojn8gtfu2i" path="res://scripts/soil_health.gd" id="3_vtaks"]
 [ext_resource type="PackedScene" uid="uid://c8jr41286oi7o" path="res://scenes/old_woman.tscn" id="4_iywne"]
@@ -14,8 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://ug02kkc308df" path="res://scenes/villager_man.tscn" id="5_p57ef"]
 [ext_resource type="PackedScene" uid="uid://byxebdomsn5hh" path="res://scenes/chicken.tscn" id="7_qnb83"]
 [ext_resource type="PackedScene" uid="uid://c47uv3ufjn4ce" path="res://scenes/house1.tscn" id="8_ka531"]
-[ext_resource type="Script" uid="uid://bbjoyoujf3jm4" path="res://scripts/next_day_button.gd" id="8_nepv3"]
-[ext_resource type="PackedScene" uid="uid://0h7v2amifiye" path="res://scenes/shovel.tscn" id="9_7025r"]
 [ext_resource type="PackedScene" uid="uid://cimwvqb08sgtf" path="res://scenes/house2.tscn" id="9_xfgfn"]
 [ext_resource type="PackedScene" uid="uid://ctfuv5q6tlrwc" path="res://scenes/house3.tscn" id="10_3bf6p"]
 [ext_resource type="PackedScene" uid="uid://w1nsqy7inq2w" path="res://scenes/animal_pen_top.tscn" id="11_myqph"]
@@ -104,22 +102,6 @@ layer = -1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 5
-
-[node name="NextDayButton" type="Button" parent="CanvasLayer"]
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -1096.0
-offset_top = -611.0
-offset_right = -1017.0
-offset_bottom = -580.0
-grow_horizontal = 0
-grow_vertical = 0
-scale = Vector2(2, 2)
-text = "Next Day"
-script = ExtResource("8_nepv3")
 
 [node name="DialogueBox" type="ColorRect" parent="CanvasLayer"]
 visible = false
@@ -254,14 +236,15 @@ grow_horizontal = 0
 theme_override_font_sizes/font_size = 20
 text = "Soil health:"
 
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 position = Vector2(1350, 781)
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 zoom = Vector2(0.7, 0.7)
-
-[node name="Shovel" parent="." instance=ExtResource("9_7025r")]
-position = Vector2(2620, 1068)
 
 [node name="Tree" parent="." instance=ExtResource("2_yqjtg")]
 position = Vector2(238, 330)
@@ -277,9 +260,13 @@ position = Vector2(982, 299)
 
 [node name="Farmer" parent="." instance=ExtResource("3_lnu2h")]
 position = Vector2(2603, 683)
+interaction_distance = null
+npc_dialogue = null
 
 [node name="Old Woman" parent="." instance=ExtResource("4_iywne")]
 position = Vector2(1325, 541)
+interaction_distance = null
+npc_dialogue = null
 
 [node name="Villager Man" parent="." instance=ExtResource("5_p57ef")]
 position = Vector2(814, 1556)
@@ -852,7 +839,7 @@ position = Vector2(2815, 776)
 position = Vector2(673, 843)
 
 [node name="finalvillager" parent="." instance=ExtResource("34_js0lu")]
-position = Vector2(1249, 1466)
+position = Vector2(1267, 1439)
 
 [node name="Red_hair_girl" parent="." instance=ExtResource("35_gxtfn")]
-position = Vector2(2379, 912)
+position = Vector2(2371, 932)

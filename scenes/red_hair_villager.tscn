@@ -41,7 +41,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gw8xa"]
-radius = 33.2415
+radius = 21.0238
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3ha3y"]
 atlas = ExtResource("3_mbe82")
@@ -74,7 +74,7 @@ sprite_frames = SubResource("SpriteFrames_hnqgn")
 animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-10, 37)
+position = Vector2(-18, 57)
 shape = SubResource("CircleShape2D_gw8xa")
 
 [node name="InteractionIcon" type="AnimatedSprite2D" parent="."]
