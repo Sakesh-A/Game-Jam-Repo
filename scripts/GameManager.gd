@@ -8,6 +8,7 @@ var prev_weather: int = 0
 var day: int = 1 
 var action_points: int = 5 
 var tree_planted: int = 0
+var tree2_planted: int = 0
 var water_maintained: int = 0 
 signal next_day 
 signal game_end 
@@ -41,6 +42,8 @@ func next_level():
 	update_weather() 
 	if tree_planted > 0:
 		tree_planted += 1
+	if tree2_planted > 0:
+		tree2_planted += 1
 	
 func update_weather(): 
 	randomize() 

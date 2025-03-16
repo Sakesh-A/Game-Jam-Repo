@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://2tcff7c21p4y"]
+
+[ext_resource type="Script" uid="uid://c5bx1qol68elp" path="res://scripts/sapling_2.gd" id="1_ck2xu"]
+[ext_resource type="Texture2D" uid="uid://cer6o2onihbwu" path="res://assets/sprites/objects.png" id="2_2tn2w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6p7n"]
+atlas = ExtResource("2_2tn2w")
+region = Rect2(323, 0, 26, 45)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqciq"]
+atlas = ExtResource("2_2tn2w")
+region = Rect2(148, 0, 26, 45)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_afq83"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6p7n")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mqciq")
+}],
+"loop": true,
+"name": &"live",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_avsvi"]
+radius = 12.0
+height = 46.0
+
+[node name="Tree" type="StaticBody2D"]
+script = ExtResource("1_ck2xu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2.38419e-07, -77)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_afq83")
+animation = &"live"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 2)
+shape = SubResource("CapsuleShape2D_avsvi")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dlv4c1hfai13r"]
+[gd_scene load_steps=10 format=3 uid="uid://dlv4c1hfai13r"]
 
 [ext_resource type="Texture2D" uid="uid://c02y15p2li7jr" path="res://assets/sprites/potato/potato_1.png" id="1_ioajt"]
 [ext_resource type="Script" uid="uid://dcj4lcsm5jbsg" path="res://scripts/potatos.gd" id="1_nk8iv"]
@@ -7,34 +7,55 @@
 [ext_resource type="Texture2D" uid="uid://ckjrpe6d1gljn" path="res://assets/sprites/potato/potato_4.png" id="4_a7vcx"]
 [ext_resource type="Texture2D" uid="uid://clbchw385mnnd" path="res://assets/sprites/potato/potato_5.png" id="5_dnclq"]
 [ext_resource type="Texture2D" uid="uid://2l86h2kh5l6a" path="res://assets/sprites/potato/potato_6.png" id="6_f1gxd"]
-[ext_resource type="Texture2D" uid="uid://imfsigr82i52" path="res://assets/sprites/potato/potato_7.png" id="7_11jt4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7gm2j"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_ioajt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_nk8iv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_qh4v4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_a7vcx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_dnclq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_f1gxd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_11jt4")
 }],
 "loop": true,
-"name": &"Growing",
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nk8iv")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_qh4v4")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_a7vcx")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_dnclq")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_f1gxd")
+}],
+"loop": true,
+"name": &"5",
 "speed": 5.0
 }]
 
@@ -47,7 +68,7 @@ script = ExtResource("1_nk8iv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_7gm2j")
-animation = &"Growing"
+animation = &"0"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 14)

@@ -13,24 +13,49 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_wllmv")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_oa5ki")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_vowok")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("4_q7hrc")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("5_vs0lf")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": ExtResource("6_o4yjx")
 }],
 "loop": true,
-"name": &"default",
+"name": &"5",
 "speed": 5.0
 }]
 
@@ -43,6 +68,7 @@ script = ExtResource("1_oa5ki")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_bxlfa")
+animation = &"5"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 44)

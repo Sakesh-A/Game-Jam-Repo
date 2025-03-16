@@ -1,23 +1,19 @@
 extends StaticBody2D
 
-@onready var potato_sprite = $AnimatedSprite2D
 var growth_stage = 0
-var max_stages = 7
-var growth_time = 1.0 
 
 func _ready():
-	start_growth_cycle()
-
-# AI citation: ChatGPT first row in the table
-func start_growth_cycle():
-	var timer = Timer.new()
-	timer.wait_time = growth_time
-	timer.autostart = true
-	timer.one_shot = false
-	timer.timeout.connect(_grow)
-	add_child(timer)
+	visible = true
+	$AnimatedSprite2D.play("0")
+	GameManager.next_day.connect(_next_day)
 	
-func _grow():
-	growth_stage = (growth_stage + 1) % max_stages 
-	potato_sprite.frame = growth_stage
-	
+func _next_day():
+	if GameManager.water > 0 and GameManager.soil_quality > 0:
+		var change = randi_range(1, 2) 
+		growth_stage += change
+	if growth_stage > 0 and growth_stage < 5:
+		$AnimatedSprite2D.play(str(growth_stage))
+	elif growth_stage <= 0:
+		$AnimatedSprite2D.play("0")
+	else:
+		$AnimatedSprite2D.play("5")
