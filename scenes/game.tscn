@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://cmisf2swqak7u"]
+[gd_scene load_steps=50 format=3 uid="uid://cmisf2swqak7u"]
 
 [ext_resource type="Script" uid="uid://bnqvhus63h3i0" path="res://scripts/dialogue_box.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://dfw2o7eoxxn6g" path="res://tile_map.tscn" id="1_txyxy"]
@@ -39,6 +39,9 @@
 [ext_resource type="PackedScene" uid="uid://cethe3ha2ypqm" path="res://scenes/red_hair_villager.tscn" id="33_v2yb1"]
 [ext_resource type="PackedScene" uid="uid://bklwoqbaarc26" path="res://scenes/finalvillager.tscn" id="34_js0lu"]
 [ext_resource type="PackedScene" uid="uid://bhgmol6kgav5y" path="res://scenes/red_hair_girl.tscn" id="35_gxtfn"]
+[ext_resource type="PackedScene" uid="uid://ckt3bcdi2oqm5" path="res://scenes/seeds.tscn" id="40_m4url"]
+[ext_resource type="PackedScene" uid="uid://d4l0800cqti21" path="res://scenes/mountain.tscn" id="41_8ool0"]
+[ext_resource type="PackedScene" uid="uid://b3dqncnewrsfs" path="res://scenes/mountain_flpped.tscn" id="42_pr1ej"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gee14"]
 bg_color = Color(0, 0, 0.133333, 1)
@@ -91,7 +94,7 @@ func _ready():
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
-position = Vector2(20, 204)
+position = Vector2(981, 386)
 
 [node name="TileMap" parent="." instance=ExtResource("1_txyxy")]
 z_index = -1
@@ -102,21 +105,38 @@ layer_0/tile_data = PackedInt32Array(-196617, 524288, 1, -327689, 524288, 1, -26
 [node name="Terrain" type="CanvasLayer" parent="."]
 layer = -1
 
+[node name="ColorRect" type="ColorRect" parent="Terrain"]
+offset_left = -3932.0
+offset_top = -2892.0
+offset_right = 10341.0
+offset_bottom = 312.0
+color = Color(0.540986, 0.806467, 0.939394, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 4818.0
+offset_top = -68.0
+offset_right = 8898.0
+offset_bottom = 3136.0
+color = Color(0.564706, 0.858824, 0.411765, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_left = -5723.0
+offset_top = -63.0
+offset_right = -1106.0
+offset_bottom = 3131.0
+color = Color(0.564706, 0.858824, 0.411765, 1)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 5
 
 [node name="NextDayButton" type="Button" parent="CanvasLayer"]
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -1096.0
-offset_top = -611.0
-offset_right = -1017.0
-offset_bottom = -580.0
-grow_horizontal = 0
-grow_vertical = 0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -39.5
+offset_right = 39.5
+offset_bottom = 31.0
+grow_horizontal = 2
 scale = Vector2(2, 2)
 text = "Next Day"
 script = ExtResource("8_nepv3")
@@ -264,22 +284,22 @@ zoom = Vector2(0.7, 0.7)
 position = Vector2(2620, 1068)
 
 [node name="Tree" parent="." instance=ExtResource("2_yqjtg")]
-position = Vector2(238, 330)
+position = Vector2(3866, 503)
 
 [node name="Chicken" parent="." instance=ExtResource("7_qnb83")]
 position = Vector2(219, 1683)
 
 [node name="Tree2" parent="." instance=ExtResource("2_yqjtg")]
-position = Vector2(1936, 530)
+position = Vector2(919, 237)
 
 [node name="Tree3" parent="." instance=ExtResource("2_yqjtg")]
-position = Vector2(982, 299)
+position = Vector2(-358, 1535)
 
 [node name="Farmer" parent="." instance=ExtResource("3_lnu2h")]
 position = Vector2(826, 1561)
 
 [node name="Old Woman" parent="." instance=ExtResource("4_iywne")]
-position = Vector2(2663, 643)
+position = Vector2(2574, 645)
 
 [node name="Villager Man" parent="." instance=ExtResource("5_p57ef")]
 position = Vector2(2390, 1022)
@@ -322,16 +342,16 @@ position = Vector2(737, 1787)
 position = Vector2(735, 1631)
 
 [node name="Tree4" parent="." instance=ExtResource("2_yqjtg")]
-position = Vector2(111, 1390)
+position = Vector2(-666, 849)
 
 [node name="Tree6" parent="." instance=ExtResource("2_yqjtg")]
 position = Vector2(992, 1192)
 
 [node name="Tree7" parent="." instance=ExtResource("2_yqjtg")]
-position = Vector2(1590, 1858)
+position = Vector2(1191, 1922)
 
 [node name="Tree9" parent="." instance=ExtResource("2_yqjtg")]
-position = Vector2(2010, 2008)
+position = Vector2(1910, 1962)
 
 [node name="Tree10" parent="." instance=ExtResource("2_yqjtg")]
 position = Vector2(2169, 280)
@@ -586,7 +606,7 @@ position = Vector2(1225, 1391)
 position = Vector2(1389, 905)
 
 [node name="Tree11" parent="." instance=ExtResource("2_yqjtg")]
-position = Vector2(811, 2068)
+position = Vector2(-909, 1918)
 
 [node name="Chicken2" parent="." instance=ExtResource("7_qnb83")]
 position = Vector2(335, 1629)
@@ -856,3 +876,54 @@ position = Vector2(1229, 1501)
 
 [node name="Red_hair_girl" parent="." instance=ExtResource("35_gxtfn")]
 position = Vector2(1349, 476)
+
+[node name="Seeds" parent="." instance=ExtResource("40_m4url")]
+position = Vector2(286, 1198)
+
+[node name="Tree5" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(3825, 1501)
+
+[node name="Tree8" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(4541, 1689)
+
+[node name="Pink Flower3" parent="." instance=ExtResource("22_jrdmb")]
+position = Vector2(4246, 903)
+
+[node name="blue flower" parent="." instance=ExtResource("15_psqdk")]
+position = Vector2(-562, 1092)
+
+[node name="Pink Flower4" parent="." instance=ExtResource("22_jrdmb")]
+position = Vector2(-648, 1921)
+
+[node name="Pink Flower5" parent="." instance=ExtResource("22_jrdmb")]
+position = Vector2(3818, 1843)
+
+[node name="blue flower2" parent="." instance=ExtResource("15_psqdk")]
+position = Vector2(4433, 2061)
+
+[node name="mountain" parent="." instance=ExtResource("41_8ool0")]
+position = Vector2(-579, -668)
+
+[node name="mountain2" parent="." instance=ExtResource("41_8ool0")]
+position = Vector2(4054, -662)
+
+[node name="mountain3" parent="." instance=ExtResource("41_8ool0")]
+position = Vector2(-841, 2546)
+
+[node name="mountain4" parent="." instance=ExtResource("42_pr1ej")]
+position = Vector2(3904, 2545)
+
+[node name="Tree12" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(-1370, 486)
+
+[node name="Tree13" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(-1516, 1192)
+
+[node name="Tree14" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(5104, 672)
+
+[node name="Tree15" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(5924, 1212)
+
+[node name="Tree16" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(-2632, 1067)
