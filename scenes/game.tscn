@@ -106,9 +106,9 @@ layer_0/tile_data = PackedInt32Array(-196617, 524288, 1, -327689, 524288, 1, -26
 layer = -1
 
 [node name="ColorRect" type="ColorRect" parent="Terrain"]
-offset_left = -3932.0
+offset_left = -4723.0
 offset_top = -2892.0
-offset_right = 10341.0
+offset_right = 9873.0
 offset_bottom = 312.0
 color = Color(0.540986, 0.806467, 0.939394, 1)
 
@@ -342,7 +342,7 @@ position = Vector2(737, 1787)
 position = Vector2(735, 1631)
 
 [node name="Tree4" parent="." instance=ExtResource("2_yqjtg")]
-position = Vector2(-666, 849)
+position = Vector2(-1365, 936)
 
 [node name="Tree6" parent="." instance=ExtResource("2_yqjtg")]
 position = Vector2(992, 1192)
@@ -914,10 +914,10 @@ position = Vector2(-841, 2546)
 position = Vector2(3904, 2545)
 
 [node name="Tree12" parent="." instance=ExtResource("2_yqjtg")]
-position = Vector2(-1370, 486)
+position = Vector2(-781, 194)
 
 [node name="Tree13" parent="." instance=ExtResource("2_yqjtg")]
-position = Vector2(-1516, 1192)
+position = Vector2(-2119, 1749)
 
 [node name="Tree14" parent="." instance=ExtResource("2_yqjtg")]
 position = Vector2(5104, 672)
@@ -927,3 +927,18 @@ position = Vector2(5924, 1212)
 
 [node name="Tree16" parent="." instance=ExtResource("2_yqjtg")]
 position = Vector2(-2632, 1067)
+
+[node name="Tree17" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(-3468, 21)
+
+[node name="Tree18" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(-1695, 25)
+
+[node name="Tree19" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(4842, 71)
+
+[node name="Tree20" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(6194, 89)
+
+[node name="Tree21" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(5820, 1980)
