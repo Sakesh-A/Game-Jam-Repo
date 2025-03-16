@@ -46,6 +46,7 @@ func _action():
 	if interacted: 
 		return  
 
+	GameManager.last_water = GameManager.day
 	GameManager.action_points -= cost 
 	GameManager.soil_quality += 1 
 	GameManager.water += 4 

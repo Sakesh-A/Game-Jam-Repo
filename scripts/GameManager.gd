@@ -15,6 +15,10 @@ signal game_end
 var game_ended
 var fountain_built: bool = false
 
+#Random events dependencies
+var last_water: int = 0
+var dry_soil: bool = false
+
 var weather_conditions = { 
 	-2: "Drought", 
 	-1: "Dry", 
@@ -32,15 +36,23 @@ func next_level():
 		game_end.emit() 
 		game_ended = true
 		return
-
+	if dry_soil and water > 0 and day - last_water < 2:
+		dry_soil = false
 	day += 1 
 	next_day.emit() 
 	action_points = 5 
 	biodiversity -= 1 
 	soil_quality -= 1 
 	water -= 1 
-	prev_weather = weather 
+	prev_weather = weather
+	if day - last_water > 2 and water < -2:
+		var change = randi_range(-2, 2) 
+		if change > -1:
+			dry_soil = true
+			biodiversity -= 2
+			soil_quality -= 3
 	update_weather() 
+	process_weather()
 	if tree_planted > 0:
 		tree_planted += 1
 	if tree2_planted > 0:

@@ -74,10 +74,11 @@ scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_8aapr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(4.99999, -43)
+position = Vector2(-9, -24)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_yiml7")
 animation = &"idle"
+offset = Vector2(2.8, -3.8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-9.00001, 16)

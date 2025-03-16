@@ -69,11 +69,11 @@ animations = [{
 script = ExtResource("1_lch7j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(11, 1)
+position = Vector2(-5, -44)
 scale = Vector2(6, 6)
 sprite_frames = SubResource("SpriteFrames_go23t")
 animation = &"idle"
-offset = Vector2(0, -12.5)
+offset = Vector2(2.66667, -5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-6, 1)

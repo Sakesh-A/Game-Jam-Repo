@@ -10,15 +10,13 @@ func _ready():
 	GameManager.next_day.connect(_next_day_started)
 	GameManager.game_end.connect(_end_game) 
 	
-	var text = "\nYou are a young boy in a small village nestled in the 
-	rugged mountains of Sierra Nevada. Once thriving, 
-	the land now struggles under the weight of climate 
-	change—rivers run dry, soil loses its richness, 
-	and the wildlife fades. The villagers look to 
-	you for help. Speak with them, learn their struggles,
-	 and take action to restore balance to the land. 
-	Each day, you have 5 Action Points—but choose wisely. 
-	You can’t do everything."
+	var text = "\nYou are a young boy in a small village nestled in the rugged mountains of the Sierra 
+	Nevada in Spain. Once thriving, the land now struggles under the weight 
+	of climate change—rivers run dry, soil loses its richness, and the wildlife 
+	fades. The villagers look to you for help. Speak with them, learn their struggles,
+	and take action to restore balance to the land. Each day, you have 5 Action Points
+	—but choose wisely. You can’t do everything.
+	Once you have completed your daily tasks, click \"Next Day\" at the top to proceed."
 	text += "\n🌤 *Today's Weather Forecast:* " + GameManager.weather_conditions[GameManager.prev_weather] + "."
 	text += "\n🌦 *Tomorrow's Prediction:* " + GameManager.weather_conditions[GameManager.weather] + "."
 	open_dialogue("Welcome to the Sierra Revival!" + text + "\nPress q to begin your journey.") 
@@ -28,6 +26,13 @@ func generate_day_text() -> String:
 	text += "\n🌱 *Biodiversity:* " + describe_biodiversity(GameManager.biodiversity)
 	text += "\n💧 *Water Supply:* " + describe_water(GameManager.water)
 	text += "\n🌾 *Soil Quality:* " + describe_soil(GameManager.soil_quality)
+	if GameManager.day - GameManager.last_water > 1 and GameManager.water < 0:
+			text += "\nCommunity members are complaining about the degradation of the irrigation channel."
+	if GameManager.tree_planted == 0 and GameManager.tree2_planted == 0 and GameManager.biodiversity < 0:
+			text += "\nCommunity members are worried about the lack of new trees in the area."
+	if GameManager.dry_soil:
+			text += "\nThe failing irrigation system has lead to a dry and dusty soil, 
+			dramatically lowering soil quality and harming biodiversity."
 	text += "\n🌤 *Today's Weather:* " + GameManager.weather_conditions[GameManager.prev_weather] + "."
 	text += "\n🌦 *Tomorrow's Forecast:* " + GameManager.weather_conditions[GameManager.weather] + "."
 	return text 

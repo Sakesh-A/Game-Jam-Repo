@@ -55,4 +55,4 @@ shape = SubResource("CapsuleShape2D_avsvi")
 position = Vector2(56.6667, -306.667)
 scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_ake3r")
-frame_progress = 0.209052
+frame_progress = 0.0780593
