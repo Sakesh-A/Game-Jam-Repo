@@ -13,6 +13,7 @@ var water_maintained: int = 0
 signal next_day 
 signal game_end 
 var game_ended
+var fountain_built: bool = false
 
 var weather_conditions = { 
 	-2: "Drought", 

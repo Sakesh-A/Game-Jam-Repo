@@ -1,19 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://duomqgl10ysod"]
+[gd_scene load_steps=11 format=3 uid="uid://duomqgl10ysod"]
 
-[ext_resource type="Texture2D" uid="uid://bfqorxs8epjrb" path="res://assets/sprites/shovel.png" id="1_y0ecl"]
-[ext_resource type="Texture2D" uid="uid://dfd8hjwst2ayp" path="res://assets/sprites/icons.png" id="2_24k6t"]
+[ext_resource type="Texture2D" uid="uid://bfqorxs8epjrb" path="res://assets/sprites/shovel.png" id="1_m72p2"]
+[ext_resource type="Script" uid="uid://i5j6qw1jnd2n" path="res://scripts/fountain.gd" id="1_uterx"]
+[ext_resource type="Texture2D" uid="uid://dfd8hjwst2ayp" path="res://assets/sprites/icons.png" id="2_lfgns"]
+[ext_resource type="Texture2D" uid="uid://cer6o2onihbwu" path="res://assets/sprites/objects.png" id="4_xo7qt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_82b8f"]
-atlas = ExtResource("1_y0ecl")
+atlas = ExtResource("1_m72p2")
 region = Rect2(0, 0, 38, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dg314"]
 animations = [{
-"frames": [],
-"loop": true,
-"name": &"Bird",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_82b8f")
@@ -24,11 +21,11 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3ha3y"]
-atlas = ExtResource("2_24k6t")
+atlas = ExtResource("2_lfgns")
 region = Rect2(37, 153, 10, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_73ou4"]
-atlas = ExtResource("2_24k6t")
+atlas = ExtResource("2_lfgns")
 region = Rect2(59, 157, 6, 12)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_i12sy"]
@@ -46,22 +43,30 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yvtvn"]
-radius = 23.7697
+radius = 21.0
 
-[node name="BirdHouse" type="StaticBody2D"]
+[node name="Fountain" type="StaticBody2D"]
+script = ExtResource("1_uterx")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Hammer" type="AnimatedSprite2D" parent="."]
 position = Vector2(-3.5, -0.999999)
-rotation = 0.452953
-scale = Vector2(1.81579, 2.03125)
+rotation = 1.27933
+scale = Vector2(1.5, 1.678)
 sprite_frames = SubResource("SpriteFrames_dg314")
 animation = &"Hammer"
 
-[node name="InteractionIcon2" type="AnimatedSprite2D" parent="."]
-position = Vector2(4, -94)
+[node name="InteractionIcon" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -102)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_i12sy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 6)
 shape = SubResource("CircleShape2D_yvtvn")
+
+[node name="Fountain" type="Sprite2D" parent="."]
+position = Vector2(5.68434e-14, -24)
+scale = Vector2(7, 7)
+texture = ExtResource("4_xo7qt")
+region_enabled = true
+region_rect = Rect2(480.911, 127.448, 14.2534, 17.715)

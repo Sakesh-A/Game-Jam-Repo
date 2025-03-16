@@ -1,10 +1,9 @@
-extends Node2D 
+extends StaticBody2D
 
 @export var interaction_distance: float = 100.0
-@export var cost: int = 2
-@export var action_description: String = "This is a bag of tree seeds. You can spend 2 AP 
-to plant these seeds, which may help provide shelter and 
-food to local fauna and improve the soil."
+@export var cost: int = 3
+@export var action_description: String = "You can spend 3 AP to build a bird fountain,
+which can attract native birds and insects."
 
 @onready var player = get_node("/root/Game/Player")
 @onready var action_box = get_node("/root/Game/CanvasLayer/ActionBox")
@@ -14,12 +13,10 @@ var interacted: bool = false
 
 func _ready(): 
 	$InteractionIcon.visible = false
-	$AnimatedSprite2D.play("seeds")
+	$Hammer.visible = true
+	$Fountain.visible = false
 	
 func _process(_delta: float) -> void:
-	if GameManager.tree_planted == 3:
-		visible = false
-		
 	if interacted: 
 		$InteractionIcon.visible = false 
 		return  
@@ -43,15 +40,16 @@ func _process(_delta: float) -> void:
   
 
 func _action(): 
-	$AnimatedSprite2D.play("hole")
+	$Hammer.visible = false
+	$Fountain.visible = true
 	if interacted: 
 		return  
 
 	GameManager.action_points -= cost 
-	GameManager.soil_quality += 2
-	GameManager.water -= 2
-	GameManager.biodiversity += 2
-	GameManager.tree_planted = 1
+	GameManager.soil_quality += 1
+	GameManager.water -= 1
+	GameManager.biodiversity += 4
+	GameManager.fountain_built = true
  
 	interacted = true 
  

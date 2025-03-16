@@ -2,9 +2,9 @@ extends Node2D
 
 @export var interaction_distance: float = 100.0
 @export var cost: int = 2
-@export var action_description: String = "This is a bag of tree seeds. You can spend 2 AP to plant 
-these seeds, which may help with the local fauna 
-and improve the soil."
+@export var action_description: String = "This is a bag of tree seeds. You can spend 2 AP 
+to plant these seeds, which may help provide shelter and 
+food to local fauna and improve the soil."
 
 @onready var player = get_node("/root/Game/Player")
 @onready var action_box = get_node("/root/Game/CanvasLayer/ActionBox")
