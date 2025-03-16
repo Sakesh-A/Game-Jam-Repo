@@ -15,7 +15,7 @@ func _ready():
 	of climate change—rivers run dry, soil loses its richness, and the wildlife 
 	fades. The villagers look to you for help. Speak with them, learn their struggles,
 	and take action to restore balance to the land. Each day, you have 5 Action Points
-	—but choose wisely. You can’t do everything.
+	—but choose wisely. You can’t do everything. You have 5 days help to the village.
 	Once you have completed your daily tasks, click \"Next Day\" at the top to proceed."
 	text += "\n🌤 *Today's Weather Forecast:* " + GameManager.weather_conditions[GameManager.prev_weather] + "."
 	text += "\n🌦 *Tomorrow's Prediction:* " + GameManager.weather_conditions[GameManager.weather] + "."
