@@ -217,7 +217,7 @@ offset_top = 80.0
 offset_right = 215.0
 offset_bottom = 111.0
 theme_override_fonts/font = ExtResource("5_o8ni1")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 17
 
 [node name="DayMessage" type="ColorRect" parent="CanvasLayer"]
 offset_left = 700.0
@@ -234,7 +234,7 @@ offset_top = 82.0
 offset_right = 111.0
 offset_bottom = 105.0
 theme_override_fonts/font = ExtResource("5_o8ni1")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 17
 text = "b"
 
 [node name="ActionBox" type="ColorRect" parent="CanvasLayer"]
@@ -252,7 +252,7 @@ offset_top = 46.0
 offset_right = 133.0
 offset_bottom = 69.0
 theme_override_fonts/font = ExtResource("5_o8ni1")
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 17
 text = "b"
 
 [node name="WaterProgress" type="ProgressBar" parent="CanvasLayer"]
