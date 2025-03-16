@@ -151,8 +151,8 @@ script = ExtResource("8_nepv3")
 [node name="DialogueBox" type="ColorRect" parent="CanvasLayer"]
 offset_left = 702.0
 offset_top = 442.0
-offset_right = 1288.0
-offset_bottom = 791.0
+offset_right = 1358.0
+offset_bottom = 863.0
 color = Color(0.364706, 0.509804, 0.666667, 0.74902)
 script = ExtResource("1_p57ef")
 
@@ -183,8 +183,8 @@ text = "b"
 [node name="ActionBox" type="ColorRect" parent="CanvasLayer"]
 offset_left = 702.0
 offset_top = 442.0
-offset_right = 1290.0
-offset_bottom = 801.0
+offset_right = 1359.0
+offset_bottom = 860.0
 color = Color(0.365741, 0.511047, 0.665884, 0.74902)
 script = ExtResource("4_nepv3")
 

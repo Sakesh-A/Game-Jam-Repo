@@ -9,26 +9,58 @@ func _ready():
 	visible = false
 	GameManager.next_day.connect(_next_day_started)
 	GameManager.game_end.connect(_end_game) 
-	var text = "" 
-	text += "\nThe weather forcast is " + GameManager.weather_conditions[GameManager.prev_weather] + " for today" 
-	text += "\nThe weather is predicted to be " + GameManager.weather_conditions[GameManager.weather] + "tomorrow" 
-	open_dialogue("Welcome to our game!\n Press q to close this message and begin the game!" + text) 
+	
+	var text = ""
+	text += "\n🌤 *Today's Weather Forecast:* " + GameManager.weather_conditions[GameManager.prev_weather] + "."
+	text += "\n🌦 *Tomorrow's Prediction:* " + GameManager.weather_conditions[GameManager.weather] + "."
+	open_dialogue("🌿 Welcome to the Sierra Nevada!" + text + "\nPress q to begin your journey.") 
 
 func generate_day_text() -> String: 
-	var text = "" 
-	text += "Biodiversity level: " + str(GameManager.biodiversity) 
-	text += "\nWater level: " + str(GameManager.water) 
-	text += "\nSoil quality: " + str(GameManager.soil_quality) 
-	text += "\nThe weather forcast is " + GameManager.weather_conditions[GameManager.prev_weather] + " for today" 
-	text += "\nThe weather is predicted to be " + GameManager.weather_conditions[GameManager.weather] + "tomorrow" 
+	var text = "\n🌿 *Daily Report* 🌿\n"
+	text += "\n🌱 *Biodiversity:* " + describe_biodiversity(GameManager.biodiversity)
+	text += "\n💧 *Water Supply:* " + describe_water(GameManager.water)
+	text += "\n🌾 *Soil Quality:* " + describe_soil(GameManager.soil_quality)
+	text += "\n🌤 *Today's Weather:* " + GameManager.weather_conditions[GameManager.prev_weather] + "."
+	text += "\n🌦 *Tomorrow's Forecast:* " + GameManager.weather_conditions[GameManager.weather] + "."
 	return text 
 
 func generate_end_text() -> String: 
-	var text = "" 
-	text += "Biodiversity level: " + str(GameManager.biodiversity) 
-	text += "\nWater level: " + str(GameManager.water) 
-	text += "\nSoil quality: " + str(GameManager.soil_quality)  
+	var text = "\n🌅 *Final Ecosystem Report* 🌅\n"
+	text += "\n🌱 *Biodiversity:* " + describe_biodiversity(GameManager.biodiversity)
+	text += "\n💧 *Water Supply:* " + describe_water(GameManager.water)
+	text += "\n🌾 *Soil Quality:* " + describe_soil(GameManager.soil_quality)
+	text += "\n🏞 Your journey has come to an end. How well did you protect the ecosystem?"
 	return text 
+
+func describe_biodiversity(value: int) -> String:
+	if value >= 3:
+		return "Thriving 🌿 - A wide range of species flourish in the region."
+	elif value >= 0:
+		return "Stable 🌾 - The ecosystem is holding strong, but could be improved."
+	elif value >= -3:
+		return "Struggling 🍂 - Wildlife is scarce, and the ecosystem is fragile."
+	else:
+		return "Collapsing ☠️ - Most species have disappeared, and the land is barren."
+
+func describe_water(value: int) -> String:
+	if value >= 4:
+		return "Abundant 💦 - Rivers flow strong, and crops grow well."
+	elif value >= 0:
+		return "Moderate 🚰 - Water is available but should be managed carefully."
+	elif value >= -3:
+		return "Scarce 🌵 - Drought conditions are developing. Conservation is needed."
+	else:
+		return "Critical ❌ - The land is dry and uninhabitable."
+
+func describe_soil(value: int) -> String:
+	if value >= 4:
+		return "Rich 🌱 - The soil is fertile and full of nutrients."
+	elif value >= 0:
+		return "Decent 🌿 - Crops can grow, but some areas need care."
+	elif value >= -3:
+		return "Depleted 🌾 - The land is dry, and farming is difficult."
+	else:
+		return "Barren 🏜 - Nothing can grow here anymore."
 
 func _next_day_started():
 	open_dialogue(generate_day_text()) 

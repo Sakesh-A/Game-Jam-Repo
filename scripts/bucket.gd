@@ -2,7 +2,9 @@ extends Node2D
 
 @export var interaction_distance: float = 100.0 # Adjust based on your game 
 @export var cost: int = 2
-@export var action_description: String = "Hello, I am a bucket! I cost "
+@export var action_description: String = "You can spend 2 AP to carry water from the well 
+to the crops, keeping them healthy, reducing the risk of 
+infestations and disease, and enriching the soil."
 
 @onready var player = get_node("/root/Game/Player")
 @onready var action_box = get_node("/root/Game/CanvasLayer/ActionBox")
@@ -28,14 +30,16 @@ func _process(_delta: float) -> void:
 		$InteractionIcon.visible = true 
 		$InteractionIcon.play("default") 
 	 
-		if Input.is_action_just_pressed("interact"):
-			var action_text = action_description + str(cost) + "\n You have this many AP points: " + str(GameManager.action_points) 
-			if GameManager.action_points < cost:
-				action_text += "\n Not enough points to buy"
-				dialogue_box.open_dialogue(action_text, get_path())
-			else:
-				action_text += "\n Press E to buy" 
-				action_box.open_action(action_text, get_path())
+		if Input.is_action_just_pressed("interact"): 
+			var action_text = action_description + "\nYou have " + str(GameManager.action_points) + " AP." 
+			if GameManager.action_points < cost: 
+				action_text += "\nNot enough AP to perform action" 
+				action_text += "\nPress q to close window " 
+				dialogue_box.open_dialogue(action_text, get_path()) 
+			else: 
+				action_text += "\nPress e to perform action" 
+				action_text += "\nPress q to close window "  
+				action_box.open_action(action_text, get_path()) 
 	else:
 		$InteractionIcon.visible = false
   
