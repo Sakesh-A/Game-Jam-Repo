@@ -19,8 +19,6 @@ func _next_day_started():
 	cost = 2 
 	
 func _process(_delta: float) -> void: # If already interacted, disable further interaction 
-	if visible:
-		print("Hello")
 	if interacted: 
 		$InteractionIcon.visible = false 
 		return  

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://dfw2o7eoxxn6g"]
+[gd_scene load_steps=21 format=4 uid="uid://jo75wgd50jr"]
 
 [ext_resource type="Texture2D" uid="uid://djyy8iudt03hc" path="res://assets/tileset/Tileset.png" id="1_ds2a8"]
 [ext_resource type="Texture2D" uid="uid://cer6o2onihbwu" path="res://assets/sprites/objects.png" id="2_lq6ru"]
@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bugtv56m2c0qp" path="res://assets/tileset/Tileset (2).png" id="4_l1mme"]
 [ext_resource type="Texture2D" uid="uid://b315l4dg3v0nu" path="res://assets/tileset/mountain.png" id="5_u1uba"]
 [ext_resource type="Texture2D" uid="uid://bs3cj0lk5o6j7" path="res://assets/sprites/FreeTileSet.png" id="6_qtlnl"]
-[ext_resource type="Texture2D" uid="uid://warkrmk8kod5" path="res://assets/sierra nevada-1.png (1).png" id="6_rc42o"]
+[ext_resource type="Texture2D" uid="uid://warkrmk8kod5" path="res://assets/sprites/sierra nevada-1.png (1).png" id="6_rc42o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pbac1"]
 texture = ExtResource("1_ds2a8")
