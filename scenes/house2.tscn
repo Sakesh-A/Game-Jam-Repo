@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://brg7bv4hso473" path="res://assets/sprites/buildings.png" id="1_ms3nk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1qtum"]
-size = Vector2(315.5, 108.75)
+size = Vector2(315.5, 138)
 
 [node name="House" type="StaticBody2D"]
 
@@ -15,5 +15,5 @@ region_enabled = true
 region_rect = Rect2(4.57001, 3.67999, 102, 100)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.25, -57.375)
+position = Vector2(-0.25, -72)
 shape = SubResource("RectangleShape2D_1qtum")
