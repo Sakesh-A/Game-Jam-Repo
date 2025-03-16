@@ -45,8 +45,8 @@
 [ext_resource type="PackedScene" uid="uid://kf18h3iheutw" path="res://scenes/bucket.tscn" id="43_05nbr"]
 [ext_resource type="PackedScene" uid="uid://cb3x3rpdx4fhi" path="res://scenes/barrel.tscn" id="44_0sl42"]
 [ext_resource type="AudioStream" uid="uid://clgqtql3w6q2i" path="res://assets/EditedAudioForGame.mp3" id="45_oaba0"]
-[ext_resource type="PackedScene" uid="uid://dqe8s1hmc544" path="res://scenes/sapling.tscn" id="46_458eo"]
-[ext_resource type="PackedScene" uid="uid://olcayy5oburg" path="res://scenes/cat.tscn" id="47_h3rex"]
+[ext_resource type="PackedScene" path="res://scenes/sapling.tscn" id="46_458eo"]
+[ext_resource type="PackedScene" path="res://scenes/cat.tscn" id="47_h3rex"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gee14"]
 bg_color = Color(0, 0, 0.133333, 1)
@@ -151,7 +151,7 @@ offset_left = 702.0
 offset_top = 442.0
 offset_right = 1288.0
 offset_bottom = 791.0
-color = Color(0.396078, 0.513726, 0.619608, 0.788235)
+color = Color(0.364706, 0.509804, 0.666667, 0.74902)
 script = ExtResource("1_p57ef")
 
 [node name="DialogueText" type="Label" parent="CanvasLayer/DialogueBox"]
@@ -167,7 +167,7 @@ offset_left = 702.0
 offset_top = 442.0
 offset_right = 1502.0
 offset_bottom = 942.0
-color = Color(0.497474, 0.497474, 0.497474, 1)
+color = Color(0.560982, 0.487922, 0.353446, 0.968627)
 script = ExtResource("3_02fa5")
 
 [node name="DayText" type="Label" parent="CanvasLayer/DayMessage"]
@@ -183,7 +183,7 @@ offset_left = 702.0
 offset_top = 442.0
 offset_right = 1290.0
 offset_bottom = 801.0
-color = Color(0.392157, 0.501961, 0.67451, 0.74902)
+color = Color(0.365741, 0.511047, 0.665884, 0.74902)
 script = ExtResource("4_nepv3")
 
 [node name="ActionText" type="Label" parent="CanvasLayer/ActionBox"]
