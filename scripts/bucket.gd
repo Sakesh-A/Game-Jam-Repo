@@ -50,8 +50,9 @@ func _action():
 		return  
 		
 	GameManager.action_points -= cost 
-	GameManager.soil_quality += 1 
-	GameManager.water += 2 
+	GameManager.soil_quality += 3
+	GameManager.biodiversity += 1
+	GameManager.water -= 2
  
 	interacted = true 
  

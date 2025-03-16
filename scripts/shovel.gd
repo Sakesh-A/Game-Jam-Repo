@@ -48,7 +48,7 @@ func _action():
 
 	GameManager.action_points -= cost 
 	GameManager.soil_quality += 1 
-	GameManager.water += 3 
+	GameManager.water += 4 
  
 	interacted = true 
  
