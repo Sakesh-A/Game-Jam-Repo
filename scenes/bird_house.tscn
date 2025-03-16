@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://duomqgl10ysod"]
+
+[node name="BirdHouse" type="StaticBody2D"]
