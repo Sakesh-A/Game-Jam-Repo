@@ -13,7 +13,7 @@ func _ready():
 	#dialogue_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	#dialogue_label.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	
-	#color = Color(0.1, 0.2, 0.5, 0.8)
+	color = Color(0.1, 0.2, 0.5, 0.8)
 	visible = false  # Start hidden
 
 	#size = Vector2(400, 200)
