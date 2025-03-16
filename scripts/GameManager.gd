@@ -74,18 +74,13 @@ func process_weather():
 		biodiversity -= 1 
 		
 	if weather_conditions[weather] == "Dry": 
-		water -= 2 
-		soil_quality -= 1 
-		
-	if weather_conditions[weather] == "Normal": 
-		soil_quality += 1 
-		biodiversity += 1 
+		water -= 1 
+		soil_quality -= 1
 
 	if weather_conditions[weather] == "Light Rain": 
-		water += 3 
-		soil_quality += 3 
+		water += 1 
 		biodiversity += 1 
 
 	if weather_conditions[weather] == "Rainy": 
-		water += 4 
-		soil_quality += 2 
+		water += 2 
+		soil_quality -= 1
